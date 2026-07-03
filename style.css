@@ -23,8 +23,9 @@ body{margin:0;background:url('assets/bg.jpg') center 80%/cover no-repeat;}
 .news-arrow{margin-left:auto;flex-shrink:0;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#edf3e4;color:#5e8c3a;font-size:12px;}
 
 /* ── Layout classes ── */
-.header-inner{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:26px;}
+.header-inner{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:26px;position:relative;}
 .header-nav{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:14px;font-weight:500;white-space:nowrap;}
+.header-logo{height:82px;width:auto;display:block;}
 .hero-grid{max-width:1180px;margin:0 auto;padding:60px 28px 80px;display:grid;grid-template-columns:1.08fr 0.92fr;gap:40px;align-items:center;position:relative;z-index:2;}
 .hero-heading{font-family:'Shippori Mincho',serif;font-weight:600;font-size:44px;line-height:1.55;color:#f0ebe0;margin:0 0 30px;letter-spacing:.01em;white-space:nowrap;text-shadow:0 2px 20px rgba(0,0,0,0.55),0 1px 4px rgba(0,0,0,0.45);}
 .torikumi-stack{display:flex;flex-direction:column;gap:36px;}
@@ -113,9 +114,12 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 /* ── Responsive: mobile ── */
 @media (max-width:768px){
   /* Header */
+  .header-inner{padding:10px 60px 10px 20px;}
+  .header-logo{height:52px;}
   .header-nav{display:none;}
   .header-line-btn{display:none !important;}
-  .hamburger{display:flex;}
+  .hamburger{display:flex;position:absolute;top:50%;right:16px;transform:translateY(-50%);margin-left:0;}
+  .mobile-menu{top:72px;}
 
   /* Hero */
   #top{min-height:620px !important;justify-content:flex-start !important;}
@@ -163,6 +167,10 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   .hero-heading{font-size:24px;}
   .variety-grid{grid-template-columns:repeat(2,1fr);}
   .hero-content{padding-bottom:36px !important;}
+  .header-logo{height:44px;}
+  .header-inner{padding:8px 52px 8px 16px;}
+  .hamburger{right:12px;}
+  .mobile-menu{top:60px;}
 }
 
 /* ── Hero entrance animations ── */

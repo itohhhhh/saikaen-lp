@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "PowerShell(Get-Command python, python3, py, npx 2>$null)",
-      "Bash(sed 's/<[^>]*>//g')"
+      "Bash(sed 's/<[^>]*>//g')",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --window-size=375,900 --virtual-time-budget=2000 --dump-dom \"file:///C:/Users/S/AppData/Local/Temp/blank.html\")"
     ]
   }
 }
