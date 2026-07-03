@@ -113,6 +113,9 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 
 /* ── Responsive: mobile ── */
 @media (max-width:768px){
+  /* Hero slider */
+  .hero-slide-staff{object-position:39% 58%;transform:scale(1.45);transform-origin:47% 75%;}
+
   /* Header */
   .header-inner{padding:10px 60px 10px 20px;}
   .header-logo{height:52px;}
