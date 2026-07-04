@@ -110,6 +110,7 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 @media (max-width:1024px){
   .hero-heading{font-size:36px;}
   .variety-grid{grid-template-columns:repeat(3,1fr);}
+  .furusato-grid{grid-template-columns:repeat(3,1fr);}
 }
 
 /* ── Responsive: mobile ── */
@@ -151,6 +152,10 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   .hanbai-content-grid{grid-template-columns:1fr;}
   .hanbai-badge{display:none !important;}
   .variety-grid{grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px;}
+
+  /* furusato */
+  .furusato-feature-grid{grid-template-columns:1fr;}
+  .furusato-grid{grid-template-columns:repeat(2,1fr);}
 
   /* cards */
   .cards-grid{grid-template-columns:1fr;}
@@ -283,6 +288,23 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   .form-grid-2{grid-template-columns:1fr;gap:0;}
   .form-radio{min-width:0;}
 }
+
+/* ── Furusato nozei page ── */
+.furusato-hero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden;}
+.furusato-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.furusato-feature-card{background:#fff;border:1.5px solid #e2ebd4;border-radius:18px;padding:30px 26px;}
+.furusato-feature-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#eef6e2;margin-bottom:18px;}
+.furusato-feature-heading{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16.5px;color:#3f5a28;margin:0 0 10px;}
+.furusato-feature-text{font-size:13.5px;color:#5c5849;line-height:1.9;margin:0;}
+.furusato-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.furusato-card{position:relative;display:flex;flex-direction:column;gap:14px;background:#fff;border:1.5px solid #e5e2d4;border-radius:16px;padding:24px 20px 20px;text-decoration:none;color:inherit;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;}
+.furusato-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--fc,#7bb04f);}
+.furusato-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(90,80,40,0.14);border-color:#d8d3c0;}
+.furusato-card-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:#3f4a33;line-height:1.5;}
+.furusato-card-sub{font-size:11.5px;color:#8a8470;}
+.furusato-card-arrow{margin-top:auto;align-self:flex-end;width:30px;height:30px;border-radius:50%;background:#f0ece0;display:flex;align-items:center;justify-content:center;color:#4d6b2f;font-size:13px;transition:background .18s,color .18s,transform .2s;}
+.furusato-card:hover .furusato-card-arrow{background:#4d6b2f;color:#fff;transform:translate(2px,-2px);}
+.furusato-note{display:flex;gap:12px;align-items:flex-start;background:#f4f6ec;border:1px solid #dde6cc;border-radius:12px;padding:16px 18px;font-size:13px;color:#4a5a3a;line-height:1.8;}
 
 /* ── News category filter ── */
 .news-filter{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;}
