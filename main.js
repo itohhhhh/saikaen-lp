@@ -105,6 +105,51 @@ if ('IntersectionObserver' in window) {
   revealEls.forEach(function(el) { el.classList.add('visible'); });
 }
 
+// News category filter
+var newsFilterBtns = document.querySelectorAll('.news-filter-btn');
+if (newsFilterBtns.length) {
+  var newsRows = document.querySelectorAll('.news-row[data-cat]');
+  newsFilterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      newsFilterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+      newsRows.forEach(function(row) {
+        row.style.display = (filter === 'all' || row.getAttribute('data-cat') === filter) ? '' : 'none';
+      });
+    });
+  });
+}
+
+// Reservation form: chip / radio toggle styling + placeholder submit
+var yoyakuForm = document.getElementById('yoyaku-form');
+if (yoyakuForm) {
+  document.querySelectorAll('.variety-chip input, .form-radio input').forEach(function(input) {
+    var sync = function() {
+      var group = input.closest('.variety-chip') ? '.variety-chip' : '.form-radio';
+      if (group === '.form-radio') {
+        document.querySelectorAll('input[name="' + input.name + '"]').forEach(function(sibling) {
+          sibling.closest('.form-radio').classList.toggle('checked', sibling.checked);
+        });
+      } else {
+        input.closest('.variety-chip').classList.toggle('checked', input.checked);
+      }
+    };
+    input.addEventListener('change', sync);
+  });
+
+  yoyakuForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!yoyakuForm.checkValidity()) {
+      yoyakuForm.reportValidity();
+      return;
+    }
+    yoyakuForm.style.display = 'none';
+    document.getElementById('yoyaku-success').classList.add('visible');
+    document.getElementById('yoyaku-success').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
+
 // Harvest calendar bar animation
 var hcalInner = document.querySelector('.hcal-inner');
 if (hcalInner) {

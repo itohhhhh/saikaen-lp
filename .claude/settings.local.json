@@ -4,7 +4,8 @@
       "PowerShell(Get-Command python, python3, py, npx 2>$null)",
       "Bash(sed 's/<[^>]*>//g')",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --window-size=375,900 --virtual-time-budget=2000 --dump-dom \"file:///C:/Users/S/AppData/Local/Temp/blank.html\")",
-      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"c:\\\\Users\\\\S\\\\saikaen-lp\\\\assets\\\\staff.jpeg\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\")"
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"c:\\\\Users\\\\S\\\\saikaen-lp\\\\assets\\\\staff.jpeg\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\")",
+      "PowerShell(cd \"c:\\\\Users\\\\S\\\\saikaen-lp\"; Start-Process -FilePath python -ArgumentList \"-m\",\"http.server\",\"8091\" -WindowStyle Hidden; Start-Sleep -Seconds 2; try { $r = Invoke-WebRequest -Uri \"http://localhost:8091/news.html\" -UseBasicParsing; $r.StatusCode } catch { $_.Exception.Message })"
     ]
   }
 }

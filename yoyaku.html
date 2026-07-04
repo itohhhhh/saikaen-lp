@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>予約フォーム | 上の山彩果園</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body>
+
+<div style="font-family:'Zen Kaku Gothic New',sans-serif;color:#514c3e;background:transparent;overflow-x:hidden;position:relative;line-height:1.8;">
+
+  <!-- ============ HEADER ============ -->
+  <header id="site-header" style="position:sticky;top:0;z-index:50;background:transparent;box-shadow:none;">
+    <div class="header-inner">
+      <a href="index.html" style="display:flex;flex-shrink:0;"><img src="assets/s1.png" alt="上の山彩果園" class="header-logo"></a>
+      <nav class="header-nav">
+        <a class="navlink" href="index.html#torikumi">当園の取り組み</a>
+        <a class="navlink" href="index.html#hanbai">果物の販売について</a>
+        <a class="navlink" href="index.html#yoyaku">予約受付</a>
+        <a class="navlink" href="index.html#furusato">ふるさと納税</a>
+        <a class="navlink" href="index.html#access">アクセス</a>
+        <a class="navlink" href="index.html#contact">お問い合わせ</a>
+      </nav>
+      <a class="btn header-line-btn" href="https://lin.ee/VrmkUfU" style="flex-shrink:0;display:flex;align-items:center;gap:9px;background:linear-gradient(135deg,#28c95f,#06b350);color:#fff;text-decoration:none;padding:9px 18px;border-radius:30px;box-shadow:0 6px 16px rgba(6,179,80,0.32);">
+        <span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#fff;border-radius:8px;flex-shrink:0;"><img src="assets/s14.png" alt="LINE" style="height:22px;width:22px;display:block;"></span>
+        <span style="font-size:11.5px;font-weight:700;line-height:1.25;">公式LINEで<br>最新情報を受け取る</span>
+      </a>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu">
+    <a href="index.html#torikumi">当園の取り組み</a>
+    <a href="index.html#hanbai">果物の販売について</a>
+    <a href="index.html#yoyaku">予約受付</a>
+    <a href="index.html#furusato">ふるさと納税</a>
+    <a href="index.html#access">アクセス</a>
+    <a href="index.html#contact">お問い合わせ</a>
+    <a href="https://lin.ee/VrmkUfU" style="display:flex;align-items:center;gap:10px;color:#3f7a2c;font-weight:700;">
+      <img src="assets/s14.png" alt="LINE" style="height:20px;width:20px;display:block;">公式LINEを追加する
+    </a>
+  </nav>
+
+  <!-- ============ ページヘッダー ============ -->
+  <section style="position:relative;padding:64px 28px 32px;background:#faf7f0;overflow:hidden;">
+    <img src="assets/pear.png" alt="" aria-hidden="true" style="position:absolute;top:-30px;right:-60px;width:280px;opacity:0.08;pointer-events:none;">
+    <div style="max-width:760px;margin:0 auto;position:relative;">
+      <nav aria-label="パンくずリスト" style="display:flex;align-items:center;gap:8px;font-size:13px;color:#8a8470;margin-bottom:24px;">
+        <a href="index.html" class="navlink" style="color:#8a8470;">ホーム</a>
+        <span aria-hidden="true">/</span>
+        <span style="color:#4d6b2f;font-weight:700;">予約フォーム</span>
+      </nav>
+      <div class="section-title-left" style="margin-bottom:0;">
+        <span class="section-title-eyebrow">RESERVATION</span>
+        <h1 class="section-title-bar">予約フォーム</h1>
+      </div>
+      <p style="font-size:14.5px;color:#5c5849;margin:22px 0 0;line-height:1.9;">収穫時期の梨・りんごをご希望の方は、下記フォームより必要事項をご入力のうえお申し込みください。内容を確認のうえ、当園より折り返しご連絡いたします。</p>
+    </div>
+  </section>
+
+  <!-- ============ 予約フォーム ============ -->
+  <section style="position:relative;padding:44px 28px 100px;background:transparent;">
+    <div style="max-width:760px;margin:0 auto;">
+
+      <div class="reveal form-card">
+
+        <div id="yoyaku-notice" style="display:flex;gap:12px;align-items:flex-start;background:#fdf0d2;border:1px solid #ecdba6;border-radius:12px;padding:16px 18px;margin-bottom:36px;font-size:13px;color:#7a5a1c;line-height:1.8;">
+          <span style="flex-shrink:0;font-size:16px;">🚧</span>
+          <span>現在、本フォームからのご予約受付システムは準備中です。ご入力内容は送信されませんので、お急ぎの方はお電話（090-1039-7162）またはメール（uenoyama.saikaen@gmail.com）にて直接ご連絡ください。</span>
+        </div>
+
+        <form id="yoyaku-form" novalidate>
+
+          <div class="form-section">
+            <h2 class="form-section-heading">お客様情報</h2>
+            <div class="form-grid-2">
+              <div class="form-field">
+                <label for="f-name">お名前<span class="form-required">必須</span></label>
+                <input type="text" id="f-name" name="name" class="form-input" placeholder="例：郡山 太郎" required>
+              </div>
+              <div class="form-field">
+                <label for="f-kana">フリガナ<span class="form-optional">任意</span></label>
+                <input type="text" id="f-kana" name="kana" class="form-input" placeholder="例：コオリヤマ タロウ">
+              </div>
+              <div class="form-field">
+                <label for="f-tel">電話番号<span class="form-required">必須</span></label>
+                <input type="tel" id="f-tel" name="tel" class="form-input" placeholder="例：090-1234-5678" required>
+              </div>
+              <div class="form-field">
+                <label for="f-email">メールアドレス<span class="form-required">必須</span></label>
+                <input type="email" id="f-email" name="email" class="form-input" placeholder="例：example@mail.com" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section-heading">ご注文内容</h2>
+            <div class="form-field">
+              <label>ご希望の品種<span class="form-optional">任意・複数選択可</span></label>
+              <div class="variety-chips">
+                <label class="variety-chip"><input type="checkbox" name="variety" value="幸水">幸水</label>
+                <label class="variety-chip"><input type="checkbox" name="variety" value="豊水">豊水</label>
+                <label class="variety-chip"><input type="checkbox" name="variety" value="二十世紀">二十世紀</label>
+                <label class="variety-chip"><input type="checkbox" name="variety" value="新星">新星</label>
+                <label class="variety-chip"><input type="checkbox" name="variety" value="あきづき">あきづき</label>
+                <label class="variety-chip"><input type="checkbox" name="variety" value="涼豊">涼豊</label>
+                <label class="variety-chip"><input type="checkbox" name="variety" value="ラ・フランス">ラ・フランス</label>
+                <label class="variety-chip"><input type="checkbox" name="variety" value="ル・レクチェ">ル・レクチェ</label>
+                <label class="variety-chip"><input type="checkbox" name="variety" value="ふじ">ふじ（りんご）</label>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="f-qty">ご希望数量の目安<span class="form-optional">任意</span></label>
+              <input type="text" id="f-qty" name="quantity" class="form-input" placeholder="例：5kg箱 × 2箱">
+            </div>
+            <div class="form-field">
+              <label>お受け取り方法<span class="form-required">必須</span></label>
+              <div class="form-radio-group">
+                <label class="form-radio"><input type="radio" name="method" value="来園引き取り" required>来園引き取り</label>
+                <label class="form-radio"><input type="radio" name="method" value="配送" required>配送（送料別途）</label>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="f-address">お届け先住所<span class="form-optional">配送をご希望の場合のみ</span></label>
+              <input type="text" id="f-address" name="address" class="form-input" placeholder="例：福島県郡山市〇〇町1-2-3">
+            </div>
+            <div class="form-field">
+              <label for="f-date">ご希望日<span class="form-optional">任意</span></label>
+              <input type="date" id="f-date" name="date" class="form-input" min="2026-07-04">
+              <span class="form-hint">収穫時期（8月〜12月）に合わせてのお受け取り・お届けとなります。</span>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h2 class="form-section-heading">その他</h2>
+            <div class="form-field">
+              <label for="f-remarks">備考・ご要望<span class="form-optional">任意</span></label>
+              <textarea id="f-remarks" name="remarks" class="form-textarea" placeholder="ギフト包装のご希望や、その他ご質問などございましたらご記入ください。"></textarea>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <label class="form-consent">
+              <input type="checkbox" name="agree" required>
+              <span><a class="navlink" href="privacy.html" target="_blank" rel="noopener" style="color:#4d6b2f;font-weight:700;">プライバシーポリシー</a>の内容に同意のうえ、送信します。</span>
+            </label>
+          </div>
+
+          <button type="submit" class="form-submit-btn">
+            予約内容を送信する
+            <span aria-hidden="true">→</span>
+          </button>
+
+        </form>
+
+        <div id="yoyaku-success" class="form-success">
+          <div class="form-success-icon">✓</div>
+          <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#4d6b2f;margin:0 0 12px;">入力内容をご確認いただきありがとうございます</h2>
+          <p style="font-size:14px;color:#5c5849;line-height:1.9;margin:0 0 24px;">現在オンラインでのご予約受付システムを準備中のため、この内容はまだ送信されておりません。<br>お手数をおかけしますが、ご予約はお電話またはメールにて承っております。</p>
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:center;">
+            <a class="navlink" href="tel:09010397162" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#4d6b2f;">090-1039-7162</a>
+            <a class="navlink" href="mailto:uenoyama.saikaen@gmail.com" style="font-size:14px;color:#5c5849;">uenoyama.saikaen@gmail.com</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="position:relative;background:url('assets/footer_mountains.png') bottom center/cover no-repeat;">
+    <div style="background:linear-gradient(to bottom,rgba(249,246,238,0.20) 0%,rgba(244,240,226,0.05) 100%);padding:56px 28px 40px;">
+      <div class="footer-main-row">
+        <img src="assets/s1.png" alt="上の山彩果園" style="height:80px;width:auto;display:block;">
+        <nav style="display:flex;align-items:center;gap:22px;font-size:14px;font-weight:500;flex-wrap:wrap;">
+          <a class="navlink" href="index.html#news">新着情報</a>
+          <a class="navlink" href="index.html#torikumi">当園の取り組み</a>
+          <a class="navlink" href="index.html#hanbai">果物の販売について</a>
+          <a class="navlink" href="index.html#yoyaku">予約受付</a>
+          <a class="navlink" href="index.html#furusato">ふるさと納税</a>
+          <a class="navlink" href="index.html#access">アクセス</a>
+          <a class="navlink" href="index.html#contact">お問い合わせ</a>
+        </nav>
+      </div>
+      <div class="footer-bottom-row">
+        <a class="navlink" href="privacy.html" style="font-size:13px;color:#5a6a44;">プライバシーポリシー</a>
+        <span style="width:1px;height:14px;background:rgba(120,150,80,0.4);"></span>
+        <a class="navlink" href="#" style="font-size:13px;color:#5a6a44;">特定商取引法に基づく表記</a>
+        <span style="margin-left:auto;font-size:12.5px;color:#7d8a6b;">© Uenoyama Saikaen All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
