@@ -289,6 +289,36 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   .form-radio{min-width:0;}
 }
 
+/* ── Product list page ── */
+.product-cat-heading{display:flex;align-items:center;gap:12px;margin:0 0 22px;}
+.product-cat-heading:not(:first-child){margin-top:54px;}
+.product-cat-label{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;color:#4d6b2f;white-space:nowrap;}
+.product-cat-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(123,176,79,0.35),transparent);}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.product-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1.5px solid #e5e2d4;border-radius:18px;padding:26px 24px 24px;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;}
+.product-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--fc,#7bb04f);}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(90,80,40,0.12);border-color:#d8d3c0;}
+.product-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;}
+.product-card-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:18px;color:#3f4a33;line-height:1.4;}
+.product-badge{font-size:10.5px;font-weight:700;border-radius:10px;padding:3px 10px;white-space:nowrap;flex-shrink:0;letter-spacing:.02em;margin-top:2px;}
+.product-badge-open{background:#eef6e2;color:#4d6b2f;}
+.product-badge-limited{background:#fbf1da;color:#a67a1e;}
+.product-badge-sold{background:#f0ece0;color:#8a8470;}
+.product-card-season{display:inline-flex;align-items:center;font-size:12px;color:#8a8470;background:#faf9f4;border-radius:20px;padding:4px 12px;margin-bottom:14px;width:fit-content;}
+.product-card-desc{font-size:13.5px;color:#5c5849;line-height:1.85;margin:0 0 20px;flex:1;}
+.product-card-cta{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#4d6b2f;text-decoration:none;}
+.product-card-cta span{width:24px;height:24px;border-radius:50%;background:#eef6e2;display:flex;align-items:center;justify-content:center;font-size:11px;transition:background .18s,color .18s,transform .2s;}
+.product-card:hover .product-card-cta span{background:#4d6b2f;color:#fff;transform:translate(2px,-2px);}
+.product-card-cta.sold{color:#a09c8c;pointer-events:none;}
+.product-card-cta.sold span{background:#f0ece0;color:#a09c8c;}
+@media (max-width:1024px){
+  .product-grid{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:768px){
+  .product-grid{grid-template-columns:1fr;}
+  .product-cat-heading:not(:first-child){margin-top:40px;}
+}
+
 /* ── Furusato nozei page ── */
 .furusato-hero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden;}
 .furusato-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}

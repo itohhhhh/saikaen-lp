@@ -150,6 +150,29 @@ if (yoyakuForm) {
   });
 }
 
+// Contact form: radio toggle styling + placeholder submit
+var contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  document.querySelectorAll('#contact-form .form-radio input').forEach(function(input) {
+    input.addEventListener('change', function() {
+      document.querySelectorAll('input[name="' + input.name + '"]').forEach(function(sibling) {
+        sibling.closest('.form-radio').classList.toggle('checked', sibling.checked);
+      });
+    });
+  });
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+    contactForm.style.display = 'none';
+    document.getElementById('contact-success').classList.add('visible');
+    document.getElementById('contact-success').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}
+
 // Harvest calendar bar animation
 var hcalInner = document.querySelector('.hcal-inner');
 if (hcalInner) {
