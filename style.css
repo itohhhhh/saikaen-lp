@@ -319,6 +319,22 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   .product-cat-heading:not(:first-child){margin-top:40px;}
 }
 
+/* ── Law (特定商取引法) page ── */
+.law-table{width:100%;border-collapse:collapse;font-size:14.5px;color:#5c5849;line-height:2;}
+.law-table th,.law-table td{padding:26px 28px;border-bottom:1px solid #ece6d2;text-align:left;vertical-align:top;}
+.law-table th{width:200px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13.5px;color:#4d6b2f;background:#faf9f4;white-space:nowrap;padding-right:20px;}
+.law-table td{padding-left:30px;}
+.law-table tr:first-child th,.law-table tr:first-child td{padding-top:6px;}
+.law-table tr:last-child th,.law-table tr:last-child td{border-bottom:none;padding-bottom:6px;}
+@media (max-width:768px){
+  .law-table,.law-table tbody,.law-table tr,.law-table th,.law-table td{display:block;width:auto;}
+  .law-table tr{padding:22px 0;border-bottom:1px solid #ece6d2;}
+  .law-table tr:first-child{padding-top:0;}
+  .law-table tr:last-child{border-bottom:none;padding-bottom:0;}
+  .law-table th,.law-table td{padding:0;border-bottom:none;white-space:normal;}
+  .law-table th{margin-bottom:8px;}
+}
+
 /* ── Furusato nozei page ── */
 .furusato-hero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden;}
 .furusato-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
