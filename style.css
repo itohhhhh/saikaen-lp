@@ -110,20 +110,20 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 @media (max-width:1024px){
   .hero-heading{font-size:36px;}
   .variety-grid{grid-template-columns:repeat(3,1fr);}
-}
 
-/* ── Responsive: mobile ── */
-@media (max-width:768px){
-  /* Hero slider */
-  .hero-slide-syuukaku{object-position:0% center;}
-
-  /* Header */
+  /* Header (ナビが幅を超えるため、ハンバーガーメニューに切替) */
   .header-inner{padding:10px 60px 10px 20px;}
   .header-logo{height:52px;}
   .header-nav{display:none;}
   .header-line-btn{display:none !important;}
   .hamburger{display:flex;position:absolute;top:50%;right:16px;transform:translateY(-50%);margin-left:0;}
   .mobile-menu{top:72px;}
+}
+
+/* ── Responsive: mobile ── */
+@media (max-width:768px){
+  /* Hero slider */
+  .hero-slide-syuukaku{object-position:0% center;}
 
   /* Hero */
   #top{min-height:620px !important;justify-content:flex-start !important;}
