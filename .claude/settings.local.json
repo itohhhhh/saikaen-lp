@@ -7,7 +7,18 @@
       "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"c:\\\\Users\\\\S\\\\saikaen-lp\\\\assets\\\\staff.jpeg\"\\); \"$\\($img.Width\\) x $\\($img.Height\\)\")",
       "PowerShell(cd \"c:\\\\Users\\\\S\\\\saikaen-lp\"; Start-Process -FilePath python -ArgumentList \"-m\",\"http.server\",\"8091\" -WindowStyle Hidden; Start-Sleep -Seconds 2; try { $r = Invoke-WebRequest -Uri \"http://localhost:8091/news.html\" -UseBasicParsing; $r.StatusCode } catch { $_.Exception.Message })",
       "Bash(curl -s -o /dev/null -w \"law.html: %{http_code}\\\\n\" http://localhost:8080/law.html)",
-      "Bash(xargs -I{} grep -l \"特定商取引法に基づく表記\" {})"
+      "Bash(xargs -I{} grep -l \"特定商取引法に基づく表記\" {})",
+      "Bash(powershell -Command \"Get-Item 'c:\\\\Users\\\\S\\\\saikaen-lp\\\\assets\\\\tyokubaijo.jpg','c:\\\\Users\\\\S\\\\saikaen-lp\\\\assets\\\\bus.jpg','c:\\\\Users\\\\S\\\\saikaen-lp\\\\assets\\\\winter.jpg' | Select-Object Name,Length\")",
+      "Bash(powershell -Command 'Add-Type -AssemblyName System.Drawing; foreach\\($f in @\\('\\\\''tyokubaijo.jpg'\\\\'','\\\\''bus.jpg'\\\\'','\\\\''winter.jpg'\\\\''\\)\\){ $img = [System.Drawing.Image]::FromFile\\(\"c:\\\\Users\\\\S\\\\saikaen-lp\\\\assets\\\\$f\"\\); $hasOrientation = $img.PropertyIdList -contains 274; $orientation = if\\($hasOrientation\\){ $img.GetPropertyItem\\(274\\).Value[0] } else { '\\\\''none'\\\\'' }; Write-Output \"$f : size=$\\($img.Width\\)x$\\($img.Height\\) orientation=$orientation\"; $img.Dispose\\(\\) }')",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(npx playwright *)",
+      "Read(//c/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/87c85ebf-c552-4514-ac08-21f52dcd94db/scratchpad/**)",
+      "Bash(node shot.js)",
+      "Bash(npm init *)",
+      "Bash(npm install *)",
+      "Bash(node nav_check.js)"
     ]
   }
 }
