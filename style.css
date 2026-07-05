@@ -421,7 +421,7 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 .fruit-deco {
   position: absolute;
   inset: 0;
-  bottom: 320px;
+  bottom: 245px;
   pointer-events: none;
   z-index: 2;
   overflow: hidden;
