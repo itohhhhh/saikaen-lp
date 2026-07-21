@@ -216,18 +216,83 @@ function submitProtectedForm(form, recaptchaAction) {
 var yoyakuForm = document.getElementById('yoyaku-form');
 if (yoyakuForm) {
   document.querySelectorAll('.variety-chip input, .form-radio input').forEach(function(input) {
-    var sync = function() {
-      var group = input.closest('.variety-chip') ? '.variety-chip' : '.form-radio';
-      if (group === '.form-radio') {
-        document.querySelectorAll('input[name="' + input.name + '"]').forEach(function(sibling) {
-          sibling.closest('.form-radio').classList.toggle('checked', sibling.checked);
-        });
-      } else {
-        input.closest('.variety-chip').classList.toggle('checked', input.checked);
-      }
-    };
-    input.addEventListener('change', sync);
+    input.addEventListener('change', function() {
+      var wrapperClass = input.closest('.variety-chip') ? 'variety-chip' : 'form-radio';
+      document.querySelectorAll('input[name="' + input.name + '"]').forEach(function(sibling) {
+        var wrapper = sibling.closest('.' + wrapperClass);
+        if (wrapper) wrapper.classList.toggle('checked', sibling.checked);
+      });
+    });
   });
+
+  // 郵便番号 → 住所の自動入力（zipcloud API、住所欄が空の場合のみ補完）
+  function wireZipAutocomplete(postalInput, addressInput) {
+    if (!postalInput || !addressInput) return;
+    var lastLookup = '';
+    var lookup = function() {
+      var digits = postalInput.value.replace(/[^0-9]/g, '');
+      if (digits.length !== 7 || digits === lastLookup) return;
+      lastLookup = digits;
+      fetch('https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + digits)
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          var result = data && data.results && data.results[0];
+          if (result && addressInput.value.trim() === '') {
+            addressInput.value = (result.address1 || '') + (result.address2 || '') + (result.address3 || '');
+          }
+        })
+        .catch(function() { /* 郵便番号検索に失敗しても入力の妨げにしない */ });
+    };
+    postalInput.addEventListener('input', lookup);
+    postalInput.addEventListener('blur', lookup);
+  }
+
+  wireZipAutocomplete(document.getElementById('f-postal'), document.getElementById('f-address'));
+  for (var zi = 1; zi <= 3; zi++) {
+    wireZipAutocomplete(document.getElementById('f-dest-postal-' + zi), document.getElementById('f-dest-address-' + zi));
+  }
+
+  // 複数お届け先の追加・削除（最大3件、1件目は常に表示）
+  var destAddBtn = document.getElementById('dest-add-btn');
+  if (destAddBtn) {
+    var destBlocks = [];
+    for (var di = 1; di <= 3; di++) {
+      var destBlock = document.getElementById('dest-block-' + di);
+      if (destBlock) destBlocks.push(destBlock);
+    }
+
+    var destUpdateAddBtn = function() {
+      var visibleCount = destBlocks.filter(function(b) { return b.style.display !== 'none'; }).length;
+      destAddBtn.style.display = visibleCount >= destBlocks.length ? 'none' : '';
+    };
+
+    destAddBtn.addEventListener('click', function() {
+      for (var i = 0; i < destBlocks.length; i++) {
+        if (destBlocks[i].style.display === 'none') {
+          destBlocks[i].style.display = '';
+          var firstInput = destBlocks[i].querySelector('input');
+          if (firstInput) firstInput.focus();
+          break;
+        }
+      }
+      destUpdateAddBtn();
+    });
+
+    yoyakuForm.querySelectorAll('.dest-remove-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var targetIndex = parseInt(btn.getAttribute('data-target'), 10);
+        destBlocks.forEach(function(b, i) {
+          if (i + 1 >= targetIndex) {
+            b.querySelectorAll('input').forEach(function(input) { input.value = ''; });
+            b.style.display = 'none';
+          }
+        });
+        destUpdateAddBtn();
+      });
+    });
+
+    destUpdateAddBtn();
+  }
 
   submitProtectedForm(yoyakuForm, 'yoyaku');
 }

@@ -49,29 +49,72 @@ if (!verify_recaptcha($recaptchaToken, 'yoyaku', $recaptchaConfig['secret_key'],
     respond(false, '不正な送信と判定されました。お手数ですが、時間をおいて再度お試しいただくか、お電話にてお問い合わせください。');
 }
 
-$name     = trim((string)($_POST['name'] ?? ''));
-$kana     = trim((string)($_POST['kana'] ?? ''));
-$tel      = trim((string)($_POST['tel'] ?? ''));
-$email    = trim((string)($_POST['email'] ?? ''));
-$quantity = trim((string)($_POST['quantity'] ?? ''));
-$method   = trim((string)($_POST['method'] ?? ''));
-$address  = trim((string)($_POST['address'] ?? ''));
-$date     = trim((string)($_POST['date'] ?? ''));
-$remarks  = trim((string)($_POST['remarks'] ?? ''));
-$agree    = (string)($_POST['agree'] ?? '');
+$name      = trim((string)($_POST['name'] ?? ''));
+$kana      = trim((string)($_POST['kana'] ?? ''));
+$tel       = trim((string)($_POST['tel'] ?? ''));
+$email     = trim((string)($_POST['email'] ?? ''));
+$postal    = trim((string)($_POST['postal'] ?? ''));
+$address   = trim((string)($_POST['address'] ?? ''));
+$variety   = trim((string)($_POST['variety'] ?? ''));
+$boxSize   = trim((string)($_POST['box_size'] ?? ''));
+$fruitSize = trim((string)($_POST['fruit_size'] ?? ''));
+$method    = trim((string)($_POST['method'] ?? ''));
+$payment   = trim((string)($_POST['payment'] ?? ''));
+$remarks   = trim((string)($_POST['remarks'] ?? ''));
+$agree     = (string)($_POST['agree'] ?? '');
 
-$varietyInput = $_POST['variety'] ?? [];
-$varietyInput = is_array($varietyInput) ? $varietyInput : [$varietyInput];
-$allowedVarieties = ['幸水', '豊水', '二十世紀', '新星', 'あきづき', '涼豊', 'ラ・フランス', 'ル・レクチェ', 'ふじ'];
-$variety = array_values(array_intersect($allowedVarieties, array_map('strval', $varietyInput)));
+// お届け先（最大3件、依頼主と異なる場合のみ入力）
+$destNames     = array_slice((array)($_POST['dest_name'] ?? []), 0, 3);
+$destTels      = array_slice((array)($_POST['dest_tel'] ?? []), 0, 3);
+$destPostals   = array_slice((array)($_POST['dest_postal'] ?? []), 0, 3);
+$destAddresses = array_slice((array)($_POST['dest_address'] ?? []), 0, 3);
+$destinations  = [];
+for ($i = 0; $i < 3; $i++) {
+    $dn = trim((string)($destNames[$i] ?? ''));
+    $dt = trim((string)($destTels[$i] ?? ''));
+    $dp = trim((string)($destPostals[$i] ?? ''));
+    $da = trim((string)($destAddresses[$i] ?? ''));
+    if ($dn === '' && $dt === '' && $dp === '' && $da === '') {
+        continue;
+    }
+    foreach ([$dn, $dt, $dp, $da] as $field) {
+        if (preg_match('/[\r\n]/', $field)) {
+            respond(false, '不正な入力が検出されました。');
+        }
+    }
+    if (mb_strlen($dn) > 100 || mb_strlen($da) > 300) {
+        respond(false, '入力内容が長すぎます。');
+    }
+    $destinations[] = ['name' => $dn, 'tel' => $dt, 'postal' => $dp, 'address' => $da];
+}
 
-$allowedMethods = ['来園引き取り', '配送'];
+$allowedVarieties  = ['幸水', '豊水', '二十世紀', '新星', 'あきづき', '涼豊', 'ラ・フランス', 'ル・レクチェ', 'ふじ'];
+$allowedBoxSizes   = ['3kg', '5kg', '10kg', '15kg'];
+$allowedFruitSizes = ['2L', '3L', '4L', '5L', '6L'];
+$allowedMethods    = ['来園引き取り', '配送'];
+$allowedPayments   = ['代金引換', '郵便払込', '銀行振込', '店頭でのお支払い'];
 
-if ($name === '' || $tel === '' || $email === '' || $method === '' || $agree === '') {
+if ($name === '' || $tel === '' || $email === '' || $method === '' || $payment === '' || $agree === '') {
     respond(false, '必須項目が入力されていません。');
 }
 
+if ($variety !== '' && !in_array($variety, $allowedVarieties, true)) {
+    respond(false, '不正な入力が検出されました。');
+}
+
+if ($boxSize !== '' && !in_array($boxSize, $allowedBoxSizes, true)) {
+    respond(false, '不正な入力が検出されました。');
+}
+
+if ($fruitSize !== '' && !in_array($fruitSize, $allowedFruitSizes, true)) {
+    respond(false, '不正な入力が検出されました。');
+}
+
 if (!in_array($method, $allowedMethods, true)) {
+    respond(false, '不正な入力が検出されました。');
+}
+
+if (!in_array($payment, $allowedPayments, true)) {
     respond(false, '不正な入力が検出されました。');
 }
 
@@ -80,7 +123,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // ヘッダーインジェクション対策：改行を含む入力は拒否する
-foreach ([$name, $kana, $tel, $email, $quantity, $method, $date] as $field) {
+foreach ([$name, $kana, $tel, $email, $postal, $address, $variety, $boxSize, $fruitSize, $method, $payment] as $field) {
     if (preg_match('/[\r\n]/', $field)) {
         respond(false, '不正な入力が検出されました。');
     }
@@ -92,16 +135,32 @@ if (mb_strlen($name) > 100 || mb_strlen($address) > 300 || mb_strlen($remarks) >
 
 $subject = '【上の山彩果園】ご予約フォームより送信';
 
+$destinationsText = '（依頼主と同じ／指定なし）';
+if ($destinations) {
+    $lines = [];
+    foreach ($destinations as $i => $dest) {
+        $lines[] = "  [お届け先" . ($i + 1) . "]"
+            . " お名前: " . ($dest['name'] !== '' ? $dest['name'] : '（指定なし）')
+            . " / 電話番号: " . ($dest['tel'] !== '' ? $dest['tel'] : '（指定なし）')
+            . " / 郵便番号: " . ($dest['postal'] !== '' ? $dest['postal'] : '（指定なし）')
+            . " / ご住所: " . ($dest['address'] !== '' ? $dest['address'] : '（指定なし）');
+    }
+    $destinationsText = "\n" . implode("\n", $lines);
+}
+
 $body = "ホームページの予約フォームより送信がありました。\n\n"
     . "お名前　　　　: {$name}\n"
     . "フリガナ　　　: {$kana}\n"
     . "電話番号　　　: {$tel}\n"
     . "メールアドレス: {$email}\n"
-    . "ご希望の品種　: " . ($variety ? implode('、', $variety) : '（指定なし）') . "\n"
-    . "ご希望数量　　: " . ($quantity !== '' ? $quantity : '（指定なし）') . "\n"
+    . "郵便番号　　　: " . ($postal !== '' ? $postal : '（指定なし）') . "\n"
+    . "ご住所　　　　: " . ($address !== '' ? $address : '（指定なし）') . "\n"
+    . "ご希望の品種　: " . ($variety !== '' ? $variety : '（指定なし）') . "\n"
+    . "ご希望の箱サイズ: " . ($boxSize !== '' ? $boxSize . '箱' : '（指定なし）') . "\n"
+    . "ご希望の果実の大きさ: " . ($fruitSize !== '' ? $fruitSize : '（指定なし）') . "\n"
     . "お受け取り方法: {$method}\n"
-    . "お届け先住所　: " . ($address !== '' ? $address : '（指定なし）') . "\n"
-    . "ご希望日　　　: " . ($date !== '' ? $date : '（指定なし）') . "\n"
+    . "お届け先　　　: {$destinationsText}\n"
+    . "お支払方法　　: {$payment}\n"
     . "\n--- 備考・ご要望 ---\n" . ($remarks !== '' ? $remarks : '（なし）') . "\n";
 
 $headers = [

@@ -31,7 +31,9 @@
       "Bash(command -v php)",
       "Bash(php -l \"c:/Users/S/saikaen-lp/send-contact.php\")",
       "Bash(node -e \"require\\('fs'\\).readFileSync\\('c:/Users/S/saikaen-lp/main.js','utf8'\\)\")",
-      "Bash(node --check \"c:/Users/S/saikaen-lp/main.js\")"
+      "Bash(node --check \"c:/Users/S/saikaen-lp/main.js\")",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --screenshot=C:/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/224bf052-3d15-4c71-a8e3-963ace1d3f26/scratchpad/yoyaku_dest.png --window-size=1400,2200 --hide-scrollbars http://localhost:8080/yoyaku.html)",
+      "Bash(curl -sI \"https://zipcloud.ibsnet.co.jp/api/search?zipcode=9631303\")"
     ]
   }
 }

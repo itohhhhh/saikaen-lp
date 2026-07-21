@@ -278,6 +278,16 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 .form-success.visible{display:block;}
 .form-success-icon{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:#eef6e2;color:#4d6b2f;font-size:28px;margin:0 auto 20px;}
 
+/* ── Reservation form: multiple destinations ── */
+.dest-block{background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:14px;padding:20px 20px 4px;margin-bottom:14px;}
+.dest-block .form-grid-2{margin-bottom:0;}
+.dest-block-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;}
+.dest-block-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13px;color:#4d6b2f;}
+.dest-remove-btn{background:none;border:none;color:#a3392f;font-size:12px;font-weight:700;cursor:pointer;padding:2px 4px;text-decoration:underline;}
+.dest-add-btn{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1.5px solid #7bb04f;color:#4d6b2f;font-weight:700;font-size:13px;padding:10px 20px;border-radius:24px;cursor:pointer;transition:background .18s,color .18s;}
+.dest-add-btn:hover{background:#eef6e2;}
+.dest-add-btn:disabled{opacity:.5;cursor:not-allowed;}
+
 @media (max-width:768px){
   .form-card{padding:30px 22px;}
   .form-grid-2{grid-template-columns:1fr;gap:0;}

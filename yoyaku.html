@@ -122,28 +122,51 @@
                 <label for="f-email">メールアドレス<span class="form-required">必須</span></label>
                 <input type="email" id="f-email" name="email" class="form-input" placeholder="例：example@mail.com" required>
               </div>
+              <div class="form-field">
+                <label for="f-postal">郵便番号<span class="form-optional">任意</span></label>
+                <input type="text" id="f-postal" name="postal" class="form-input" placeholder="例：963-1303（郡山市熱海町）">
+              </div>
+              <div class="form-field">
+                <label for="f-address">ご住所<span class="form-optional">任意</span></label>
+                <input type="text" id="f-address" name="address" class="form-input" placeholder="例：福島県郡山市熱海町〇〇">
+              </div>
             </div>
           </div>
 
           <div class="form-section">
             <h2 class="form-section-heading">ご注文内容</h2>
             <div class="form-field">
-              <label>ご希望の品種<span class="form-optional">任意・複数選択可</span></label>
+              <label>ご希望の品種<span class="form-optional">任意・1つ選択</span></label>
               <div class="variety-chips">
-                <label class="variety-chip"><input type="checkbox" name="variety" value="幸水">幸水</label>
-                <label class="variety-chip"><input type="checkbox" name="variety" value="豊水">豊水</label>
-                <label class="variety-chip"><input type="checkbox" name="variety" value="二十世紀">二十世紀</label>
-                <label class="variety-chip"><input type="checkbox" name="variety" value="新星">新星</label>
-                <label class="variety-chip"><input type="checkbox" name="variety" value="あきづき">あきづき</label>
-                <label class="variety-chip"><input type="checkbox" name="variety" value="涼豊">涼豊</label>
-                <label class="variety-chip"><input type="checkbox" name="variety" value="ラ・フランス">ラ・フランス</label>
-                <label class="variety-chip"><input type="checkbox" name="variety" value="ル・レクチェ">ル・レクチェ</label>
-                <label class="variety-chip"><input type="checkbox" name="variety" value="ふじ">ふじ（りんご）</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="幸水">幸水</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="豊水">豊水</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="二十世紀">二十世紀</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="新星">新星</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="あきづき">あきづき</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="涼豊">涼豊</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="ラ・フランス">ラ・フランス</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="ル・レクチェ">ル・レクチェ</label>
+                <label class="variety-chip"><input type="radio" name="variety" value="ふじ">ふじ（りんご）</label>
               </div>
             </div>
             <div class="form-field">
-              <label for="f-qty">ご希望数量の目安<span class="form-optional">任意</span></label>
-              <input type="text" id="f-qty" name="quantity" class="form-input" placeholder="例：5kg箱 × 2箱">
+              <label>ご希望の箱サイズ<span class="form-optional">任意・1つ選択</span></label>
+              <div class="form-radio-group">
+                <label class="form-radio"><input type="radio" name="box_size" value="3kg">3kg箱</label>
+                <label class="form-radio"><input type="radio" name="box_size" value="5kg">5kg箱</label>
+                <label class="form-radio"><input type="radio" name="box_size" value="10kg">10kg箱</label>
+                <label class="form-radio"><input type="radio" name="box_size" value="15kg">15kg箱</label>
+              </div>
+            </div>
+            <div class="form-field">
+              <label>ご希望の果実の大きさ<span class="form-optional">任意・1つ選択</span></label>
+              <div class="form-radio-group">
+                <label class="form-radio"><input type="radio" name="fruit_size" value="2L">2L</label>
+                <label class="form-radio"><input type="radio" name="fruit_size" value="3L">3L</label>
+                <label class="form-radio"><input type="radio" name="fruit_size" value="4L">4L</label>
+                <label class="form-radio"><input type="radio" name="fruit_size" value="5L">5L</label>
+                <label class="form-radio"><input type="radio" name="fruit_size" value="6L">6L</label>
+              </div>
             </div>
             <div class="form-field">
               <label>お受け取り方法<span class="form-required">必須</span></label>
@@ -153,13 +176,98 @@
               </div>
             </div>
             <div class="form-field">
-              <label for="f-address">お届け先住所<span class="form-optional">配送をご希望の場合のみ</span></label>
-              <input type="text" id="f-address" name="address" class="form-input" placeholder="例：福島県郡山市〇〇町1-2-3">
+              <label>お届け先<span class="form-optional">配送をご希望の場合のみ・依頼主と異なる場合にご記入ください・最大3件</span></label>
+
+              <div class="dest-block" id="dest-block-1">
+                <div class="dest-block-head">
+                  <span class="dest-block-title">お届け先 1</span>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-field">
+                    <label for="f-dest-name-1">お届け先のお名前<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-name-1" name="dest_name[]" class="form-input" placeholder="例：郡山 花子">
+                  </div>
+                  <div class="form-field">
+                    <label for="f-dest-tel-1">お届け先の電話番号<span class="form-optional">任意</span></label>
+                    <input type="tel" id="f-dest-tel-1" name="dest_tel[]" class="form-input" placeholder="例：090-1234-5678">
+                  </div>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-field">
+                    <label for="f-dest-postal-1">お届け先の郵便番号<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-postal-1" name="dest_postal[]" class="form-input" placeholder="例：963-1303">
+                  </div>
+                  <div class="form-field">
+                    <label for="f-dest-address-1">お届け先住所<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-address-1" name="dest_address[]" class="form-input" placeholder="例：福島県郡山市〇〇町1-2-3">
+                  </div>
+                </div>
+              </div>
+
+              <div class="dest-block" id="dest-block-2" style="display:none;">
+                <div class="dest-block-head">
+                  <span class="dest-block-title">お届け先 2</span>
+                  <button type="button" class="dest-remove-btn" data-target="2">この届け先を削除</button>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-field">
+                    <label for="f-dest-name-2">お届け先のお名前<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-name-2" name="dest_name[]" class="form-input" placeholder="例：郡山 花子">
+                  </div>
+                  <div class="form-field">
+                    <label for="f-dest-tel-2">お届け先の電話番号<span class="form-optional">任意</span></label>
+                    <input type="tel" id="f-dest-tel-2" name="dest_tel[]" class="form-input" placeholder="例：090-1234-5678">
+                  </div>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-field">
+                    <label for="f-dest-postal-2">お届け先の郵便番号<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-postal-2" name="dest_postal[]" class="form-input" placeholder="例：963-1303">
+                  </div>
+                  <div class="form-field">
+                    <label for="f-dest-address-2">お届け先住所<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-address-2" name="dest_address[]" class="form-input" placeholder="例：福島県郡山市〇〇町1-2-3">
+                  </div>
+                </div>
+              </div>
+
+              <div class="dest-block" id="dest-block-3" style="display:none;">
+                <div class="dest-block-head">
+                  <span class="dest-block-title">お届け先 3</span>
+                  <button type="button" class="dest-remove-btn" data-target="3">この届け先を削除</button>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-field">
+                    <label for="f-dest-name-3">お届け先のお名前<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-name-3" name="dest_name[]" class="form-input" placeholder="例：郡山 花子">
+                  </div>
+                  <div class="form-field">
+                    <label for="f-dest-tel-3">お届け先の電話番号<span class="form-optional">任意</span></label>
+                    <input type="tel" id="f-dest-tel-3" name="dest_tel[]" class="form-input" placeholder="例：090-1234-5678">
+                  </div>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-field">
+                    <label for="f-dest-postal-3">お届け先の郵便番号<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-postal-3" name="dest_postal[]" class="form-input" placeholder="例：963-1303">
+                  </div>
+                  <div class="form-field">
+                    <label for="f-dest-address-3">お届け先住所<span class="form-optional">任意</span></label>
+                    <input type="text" id="f-dest-address-3" name="dest_address[]" class="form-input" placeholder="例：福島県郡山市〇〇町1-2-3">
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" id="dest-add-btn" class="dest-add-btn">＋ お届け先を追加（最大3件）</button>
             </div>
             <div class="form-field">
-              <label for="f-date">ご希望日<span class="form-optional">任意</span></label>
-              <input type="date" id="f-date" name="date" class="form-input" min="2026-07-04">
-              <span class="form-hint">収穫時期（8月〜12月）に合わせてのお受け取り・お届けとなります。</span>
+              <label>お支払方法<span class="form-required">必須</span></label>
+              <div class="form-radio-group">
+                <label class="form-radio"><input type="radio" name="payment" value="代金引換" required>代金引換</label>
+                <label class="form-radio"><input type="radio" name="payment" value="郵便払込" required>郵便払込</label>
+                <label class="form-radio"><input type="radio" name="payment" value="銀行振込" required>銀行振込</label>
+                <label class="form-radio"><input type="radio" name="payment" value="店頭でのお支払い" required>店頭でのお支払い</label>
+              </div>
             </div>
           </div>
 
@@ -167,7 +275,7 @@
             <h2 class="form-section-heading">その他</h2>
             <div class="form-field">
               <label for="f-remarks">備考・ご要望<span class="form-optional">任意</span></label>
-              <textarea id="f-remarks" name="remarks" class="form-textarea" placeholder="ギフト包装のご希望や、その他ご質問などございましたらご記入ください。"></textarea>
+              <textarea id="f-remarks" name="remarks" class="form-textarea" placeholder="配達希望時間、クール便のご希望、その他ご質問などございましたらご記入ください。"></textarea>
             </div>
           </div>
 
