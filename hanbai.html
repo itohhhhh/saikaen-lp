@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>果物の販売について | 上の山彩果園</title>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body>
+
+<div style="font-family:'Zen Kaku Gothic New',sans-serif;color:#514c3e;background:transparent;overflow-x:hidden;position:relative;line-height:1.8;">
+
+  <!-- ============ FLOATING FRUIT DECO ============ -->
+  <div class="fruit-deco" aria-hidden="true">
+    <!-- 左側：右端をコンテンツ左端に合わせる（right: 50vw + 540px） -->
+    <img src="assets/pear.png"   class="fruit-deco-item" style="right:calc(50vw + 540px);top:750px; width:620px;opacity:1;animation:fruitDrift1 7.8s ease-in-out infinite;">
+    <img src="assets/pear3.png"  class="fruit-deco-item" style="right:calc(50vw + 540px);top:1650px;width:448px;opacity:1;animation:fruitDrift3 9.1s ease-in-out 1.4s infinite;">
+    <img src="assets/pear2.png"  class="fruit-deco-item" style="right:calc(50vw + 540px);top:2550px;width:510px;opacity:1;animation:fruitDrift2 8.3s ease-in-out 0.7s infinite;">
+    <img src="assets/apple.png"  class="fruit-deco-item" style="right:calc(50vw + 540px);top:3350px;width:450px;opacity:1;animation:fruitDrift4 7.3s ease-in-out 2.3s infinite;">
+    <!-- 右側：左端をコンテンツ右端に合わせる（left: 50vw + 540px） -->
+    <img src="assets/pear2.png"  class="fruit-deco-item" style="left:calc(50vw + 540px);top:1150px;width:540px;opacity:1;animation:fruitDrift3 8.6s ease-in-out 0.4s infinite;">
+    <img src="assets/apple.png"  class="fruit-deco-item" style="left:calc(50vw + 540px);top:2050px;width:460px;opacity:1;animation:fruitDrift1 9.4s ease-in-out 1.8s infinite;">
+    <img src="assets/pear.png"   class="fruit-deco-item" style="left:calc(50vw + 540px);top:2950px;width:615px;opacity:1;animation:fruitDrift4 7.8s ease-in-out 3.1s infinite;">
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header id="site-header" style="position:sticky;top:0;z-index:50;background:transparent;box-shadow:none;">
+    <div class="header-inner">
+      <a href="index.html" style="display:flex;flex-shrink:0;"><img src="assets/s1.png" alt="上の山彩果園" class="header-logo"></a>
+      <nav class="header-nav">
+        <a class="navlink" href="torikumi.html">当園の取り組み</a>
+        <a class="navlink" href="hanbai.html">果物の販売について</a>
+        <a class="navlink" href="yoyaku.html">予約受付</a>
+        <a class="navlink" href="furusato.html">ふるさと納税</a>
+        <a class="navlink" href="access.html">アクセス</a>
+        <a class="navlink" href="contact.html">お問い合わせ</a>
+      </nav>
+      <a class="btn header-line-btn" href="https://lin.ee/VrmkUfU" style="flex-shrink:0;display:flex;align-items:center;gap:9px;background:linear-gradient(135deg,#28c95f,#06b350);color:#fff;text-decoration:none;padding:9px 18px;border-radius:30px;box-shadow:0 6px 16px rgba(6,179,80,0.32);">
+        <span style="display:flex;align-items:center;justify-content:center;width:28px;height:28px;background:#fff;border-radius:8px;flex-shrink:0;"><img src="assets/s14.png" alt="LINE" style="height:22px;width:22px;display:block;"></span>
+        <span style="font-size:11.5px;font-weight:700;line-height:1.25;">公式LINEで<br>最新情報を受け取る</span>
+      </a>
+      <button class="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu">
+    <a href="torikumi.html">当園の取り組み</a>
+    <a href="hanbai.html">果物の販売について</a>
+    <a href="yoyaku.html">予約受付</a>
+    <a href="furusato.html">ふるさと納税</a>
+    <a href="access.html">アクセス</a>
+    <a href="contact.html">お問い合わせ</a>
+    <a href="https://lin.ee/VrmkUfU" style="display:flex;align-items:center;gap:10px;color:#3f7a2c;font-weight:700;">
+      <img src="assets/s14.png" alt="LINE" style="height:20px;width:20px;display:block;">公式LINEを追加する
+    </a>
+  </nav>
+
+  <!-- ============ ページヒーロー ============ -->
+  <section class="page-hero" style="background:url('assets/ringo.jpg') center 40%/cover no-repeat;">
+    <div style="position:absolute;inset:0;background:linear-gradient(160deg,rgba(35,20,8,0.74) 0%,rgba(45,28,10,0.46) 55%,rgba(45,28,10,0.15) 100%);"></div>
+    <div style="max-width:1080px;margin:0 auto;padding:130px 28px 40px;position:relative;width:100%;">
+      <nav aria-label="パンくずリスト" style="display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,0.75);margin-bottom:18px;">
+        <a href="index.html" class="navlink" style="color:rgba(255,255,255,0.75);text-shadow:none;">ホーム</a>
+        <span aria-hidden="true">/</span>
+        <span style="color:#fff;font-weight:700;">果物の販売について</span>
+      </nav>
+      <span style="display:block;font-family:'Shippori Mincho',serif;font-size:13px;color:#f0d090;letter-spacing:.14em;margin-bottom:12px;font-weight:500;">SALES — 産地直送・ご注文について</span>
+      <h1 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:34px;color:#fff;margin:0 0 16px;letter-spacing:.03em;">果物の販売について</h1>
+      <p style="max-width:560px;font-size:14.5px;color:rgba(255,255,255,0.92);margin:0;line-height:1.95;">上の山彩果園では、もぎたての新鮮な梨・りんごを直売しております。数量限定のため、早めのご予約をおすすめしています。ご注文方法や料金、品種ごとの販売時期をご案内します。</p>
+    </div>
+  </section>
+
+  <!-- ============ ご注文方法 ============ -->
+  <section style="position:relative;padding:70px 28px 20px;background:#faf7f0;">
+    <div style="max-width:1080px;margin:0 auto;">
+      <div class="section-title-left">
+        <span class="section-title-eyebrow">HOW TO ORDER</span>
+        <h2 class="section-title-bar">ご注文方法</h2>
+      </div>
+      <p style="font-size:14px;color:#5c5849;margin:18px 0 30px;line-height:1.9;max-width:640px;">ご注文はお電話・FAX・メール・ご予約フォームの4通りで承っております。お気軽にお問い合わせください。</p>
+      <div class="method-grid reveal">
+        <div class="method-card">
+          <span class="method-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d8030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <h3 class="method-title">お電話でのご注文</h3>
+          <a class="method-value" href="tel:09010397162">090-1039-7162</a>
+          <p class="method-text">受付時間 9:00〜17:00　不定休</p>
+        </div>
+        <div class="method-card">
+          <span class="method-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d8030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </span>
+          <h3 class="method-title">FAXでのご注文</h3>
+          <span class="method-value">024-984-3252</span>
+          <p class="method-text">品種・数量・お届け先をご記入ください。</p>
+        </div>
+        <div class="method-card">
+          <span class="method-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d8030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+          </span>
+          <h3 class="method-title">メールでのご注文</h3>
+          <a class="method-value" href="mailto:uenoyama.saikaen@gmail.com" style="font-size:13.5px;">uenoyama.saikaen<br>@gmail.com</a>
+          <p class="method-text">お気軽にお問い合わせください。</p>
+        </div>
+        <div class="method-card">
+          <span class="method-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4d8030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <h3 class="method-title">ご予約フォーム</h3>
+          <a class="method-value" href="yoyaku.html" style="font-size:15px;">ご予約はこちら</a>
+          <p class="method-text">ご希望の品種・数量をお知らせください。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 料金表 ============ -->
+  <section style="position:relative;padding:64px 28px 20px;background:#faf7f0;">
+    <div style="max-width:1080px;margin:0 auto;">
+      <div class="section-title-left">
+        <span class="section-title-eyebrow">PRICE LIST</span>
+        <h2 class="section-title-bar">料金表</h2>
+      </div>
+      <p style="font-size:14px;color:#5c5849;margin:18px 0 26px;line-height:1.9;max-width:640px;">箱の大きさ・果実のサイズ・お届け先によって料金が異なります。詳しくは下記の料金表をご覧ください。</p>
+      <div class="reveal" style="background:#fff;border-radius:24px;padding:20px;box-shadow:0 18px 40px rgba(150,130,60,0.12);">
+        <img src="assets/price.png" alt="上の山彩果園 くだもの料金表（箱の大きさ・果実サイズ・お届け先別の送料・お支払い方法）" style="width:100%;border-radius:14px;display:block;">
+      </div>
+      <p style="font-size:12.5px;color:#8a8470;margin:16px 0 0;line-height:1.8;">※価格は改定となる場合がございます。最新の料金は上記表をご確認いただくか、お問い合わせください。</p>
+    </div>
+  </section>
+
+  <!-- ============ 品種ごとの販売時期 ============ -->
+  <section style="position:relative;padding:56px 28px 20px;background:#faf7f0;">
+    <div style="max-width:1080px;margin:0 auto;">
+      <div class="section-title-left">
+        <span class="section-title-eyebrow">SCHEDULE</span>
+        <h2 class="section-title-bar">品種ごとの販売時期</h2>
+      </div>
+      <p style="font-size:14px;color:#5c5849;margin:18px 0 26px;line-height:1.9;max-width:640px;">品種ごとの収穫・販売時期の目安です。天候により前後する場合がございますので、あらかじめご了承ください。</p>
+      <div class="reveal" style="background:#fff;border-radius:24px;padding:20px;box-shadow:0 18px 40px rgba(150,130,60,0.12);">
+        <img src="assets/schedule.png" alt="上の山彩果園 収穫・販売スケジュール（品種ごとの8月〜12月の販売時期の目安）" style="width:100%;border-radius:14px;display:block;">
+      </div>
+      <p style="font-size:12.5px;color:#8a8470;margin:16px 0 0;line-height:1.8;">※詳しい収穫状況は公式LINEでも随時お知らせしています。</p>
+    </div>
+  </section>
+
+  <!-- ============ 当園からのお知らせ ============ -->
+  <section style="position:relative;padding:56px 28px 20px;background:#faf7f0;">
+    <div style="max-width:1080px;margin:0 auto;">
+      <div class="section-title-left">
+        <span class="section-title-eyebrow">NEWS</span>
+        <h2 class="section-title-bar">当園からのお知らせ</h2>
+      </div>
+      <p style="font-size:14px;color:#5c5849;margin:18px 0 26px;line-height:1.9;max-width:640px;">当園からの最新のお知らせです。</p>
+      <div class="reveal" style="max-width:520px;margin:0 auto;background:#fff;border-radius:24px;padding:20px;box-shadow:0 18px 40px rgba(150,130,60,0.12);">
+        <img src="assets/flyer.png" alt="上の山彩果園からのお知らせチラシ" style="width:100%;border-radius:14px;display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ご注文の流れ ============ -->
+  <section style="position:relative;padding:70px 28px 20px;background:#faf7f0;">
+    <div style="max-width:1080px;margin:0 auto;">
+      <div class="section-title-left">
+        <span class="section-title-eyebrow">FLOW</span>
+        <h2 class="section-title-bar">ご注文の流れ</h2>
+      </div>
+      <div class="flow-grid reveal">
+        <div class="flow-card">
+          <span class="flow-num">1</span>
+          <h3 class="flow-title">ご予約</h3>
+          <p class="flow-text">予約フォーム・お電話・メールにて、ご希望の品種と受け取り方法をお知らせください。</p>
+        </div>
+        <div class="flow-connector" aria-hidden="true">→</div>
+        <div class="flow-card">
+          <span class="flow-num">2</span>
+          <h3 class="flow-title">収穫・箱詰め</h3>
+          <p class="flow-text">収穫時期に合わせて、完熟の見極めを大切にひとつずつ収穫し、丁寧に箱詰めします。</p>
+        </div>
+        <div class="flow-connector" aria-hidden="true">→</div>
+        <div class="flow-card">
+          <span class="flow-num">3</span>
+          <h3 class="flow-title">お受け取り</h3>
+          <p class="flow-text">来園引き取り、または配送（送料別途）にてお届けします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section style="position:relative;padding:20px 28px 90px;background:transparent;">
+    <div class="reveal" style="max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:24px;">
+      <div style="flex:1;min-width:280px;background:linear-gradient(135deg,#3f5a28,#5e8c3a);border-radius:24px;padding:40px 40px;box-shadow:0 18px 40px rgba(60,90,40,0.22);">
+        <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#fff;margin:0 0 10px;">品種ごとの一覧を見る</h2>
+        <p style="font-size:13.5px;color:rgba(255,255,255,0.9);margin:0 0 22px;">販売中の品種・数量限定品を一覧でご確認いただけます。</p>
+        <a class="btn" href="products.html" style="display:inline-flex;align-items:center;gap:14px;background:#fff;color:#3f5a28;text-decoration:none;font-weight:700;font-size:14.5px;padding:13px 20px 13px 26px;border-radius:34px;">
+          販売商品一覧を見る
+          <span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#7bb04f;color:#fff;font-size:12px;">→</span>
+        </a>
+      </div>
+      <div style="flex:1;min-width:280px;background:linear-gradient(160deg,#f7f3e6,#f3efe0);border-radius:24px;padding:40px 40px;box-shadow:0 18px 40px rgba(150,130,60,0.14);">
+        <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#7a5a1c;margin:0 0 10px;">ご予約はこちらから</h2>
+        <p style="font-size:13.5px;color:#5c5849;margin:0 0 22px;">早期予約で確実にお届け。ご希望の品種・数量をお知らせください。</p>
+        <a class="btn" href="yoyaku.html" style="display:inline-flex;align-items:center;gap:14px;background:#4d6b2f;color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;padding:13px 20px 13px 26px;border-radius:34px;">
+          予約フォームへ
+          <span style="display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,0.25);color:#fff;font-size:12px;">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="position:relative;background:url('assets/footer_mountains.png') bottom center/cover no-repeat;">
+    <div style="background:linear-gradient(to bottom,rgba(249,246,238,0.20) 0%,rgba(244,240,226,0.05) 100%);padding:56px 28px 40px;">
+      <div class="footer-main-row">
+        <img src="assets/s1.png" alt="上の山彩果園" style="height:80px;width:auto;display:block;">
+        <nav style="display:flex;align-items:center;gap:22px;font-size:14px;font-weight:500;flex-wrap:wrap;">
+          <a class="navlink" href="index.html#news">新着情報</a>
+          <a class="navlink" href="torikumi.html">当園の取り組み</a>
+          <a class="navlink" href="hanbai.html">果物の販売について</a>
+          <a class="navlink" href="yoyaku.html">予約受付</a>
+          <a class="navlink" href="furusato.html">ふるさと納税</a>
+          <a class="navlink" href="access.html">アクセス</a>
+          <a class="navlink" href="contact.html">お問い合わせ</a>
+        </nav>
+      </div>
+      <div class="footer-bottom-row">
+        <a class="navlink" href="privacy.html" style="font-size:13px;color:#5a6a44;">プライバシーポリシー</a>
+        <span style="width:1px;height:14px;background:rgba(120,150,80,0.4);"></span>
+        <a class="navlink" href="law.html" style="font-size:13px;color:#5a6a44;">特定商取引法に基づく表記</a>
+        <span style="margin-left:auto;font-size:12.5px;color:#7d8a6b;">© Uenoyama Saikaen All Rights Reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

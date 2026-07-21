@@ -352,6 +352,48 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   .furusato-grid{grid-template-columns:repeat(3,1fr);}
 }
 
+/* ── Generic page hero (torikumi / hanbai pages) ── */
+.page-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;overflow:hidden;}
+
+/* ── Torikumi (our commitment) page ── */
+.torikumi-voice{display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:center;}
+.torikumi-voice-img{border-radius:18px;overflow:hidden;box-shadow:0 16px 34px rgba(90,80,40,0.16);}
+.torikumi-voice-img img{width:100%;display:block;}
+.torikumi-voice-quote{font-family:'Shippori Mincho',serif;font-size:17px;color:#3f5a28;line-height:2;margin:0 0 18px;}
+.torikumi-voice-name{font-size:13px;color:#8a8470;}
+
+.furusato-feature-grid--2col{grid-template-columns:repeat(2,1fr);max-width:760px;}
+
+/* ── Purchase flow (hanbai page) ── */
+.flow-grid{display:grid;grid-template-columns:1fr 48px 1fr 48px 1fr;align-items:center;}
+.flow-card{background:#fff;border:1.5px solid #e5e2d4;border-radius:18px;padding:30px 24px;text-align:center;height:100%;}
+.flow-num{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#4d6b2f;color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;margin:0 auto 16px;}
+.flow-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16.5px;color:#3f5a28;margin:0 0 10px;}
+.flow-text{font-size:13px;color:#5c5849;line-height:1.85;margin:0;}
+.flow-connector{display:flex;align-items:center;justify-content:center;color:#b8c9a0;font-size:22px;}
+
+/* ── Order methods (hanbai page) ── */
+.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.method-card{background:#fff;border:1.5px solid #e5e2d4;border-radius:18px;padding:26px 22px;}
+.method-icon{width:44px;height:44px;border-radius:12px;background:#eef6e2;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+.method-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#3f5a28;margin:0 0 10px;}
+.method-value{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#4d6b2f;text-decoration:none;display:inline-block;margin:0 0 6px;word-break:break-all;line-height:1.4;}
+.method-text{font-size:12px;color:#8a8470;line-height:1.7;margin:0;}
+
+@media (max-width:1024px){
+  .method-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (max-width:768px){
+  .torikumi-voice{grid-template-columns:1fr;gap:26px;}
+  .flow-grid{grid-template-columns:1fr;gap:14px;}
+  .flow-connector{transform:rotate(90deg);}
+}
+
+@media (max-width:480px){
+  .method-grid{grid-template-columns:1fr;}
+}
+
 /* ── Access page ── */
 .access-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(160deg,#33481f 0%,#4d6b2f 50%,#6a9a44 100%);}
 .access-hero-glow{position:absolute;inset:0;background:radial-gradient(circle at 12% 10%,rgba(205,238,160,0.16),transparent 45%),radial-gradient(circle at 88% 92%,rgba(255,255,255,0.08),transparent 40%);pointer-events:none;}
