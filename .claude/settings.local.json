@@ -27,7 +27,11 @@
       "Read(//c/Program Files \\\\\\(x86\\\\\\)/Microsoft/Edge/Application/**)",
       "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --screenshot=C:/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/224bf052-3d15-4c71-a8e3-963ace1d3f26/scratchpad/hanbai_methods.png --window-size=1400,1000 --hide-scrollbars http://localhost:8080/hanbai.html)",
       "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --screenshot=C:/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/224bf052-3d15-4c71-a8e3-963ace1d3f26/scratchpad/hanbai_mobile.png --window-size=390,3500 --hide-scrollbars http://localhost:8080/hanbai.html)",
-      "Bash(taskkill //F //IM python.exe)"
+      "Bash(taskkill //F //IM python.exe)",
+      "Bash(command -v php)",
+      "Bash(php -l \"c:/Users/S/saikaen-lp/send-contact.php\")",
+      "Bash(node -e \"require\\('fs'\\).readFileSync\\('c:/Users/S/saikaen-lp/main.js','utf8'\\)\")",
+      "Bash(node --check \"c:/Users/S/saikaen-lp/main.js\")"
     ]
   }
 }

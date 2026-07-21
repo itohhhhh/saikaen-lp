@@ -103,12 +103,19 @@
           </div>
         </div>
 
-        <div id="contact-notice" style="display:flex;gap:12px;align-items:flex-start;background:#fdf0d2;border:1px solid #ecdba6;border-radius:12px;padding:16px 18px;margin-bottom:36px;font-size:13px;color:#7a5a1c;line-height:1.8;">
-          <span style="flex-shrink:0;font-size:16px;">🚧</span>
-          <span>現在、本フォームからの送信システムは準備中です。ご入力内容は送信されませんので、お急ぎの方はお電話（090-1039-7162）またはメール（uenoyama.saikaen@gmail.com）にて直接ご連絡ください。</span>
+        <div id="contact-error" style="display:none;gap:12px;align-items:flex-start;background:#fdeceb;border:1px solid #f3c6c2;border-radius:12px;padding:16px 18px;margin-bottom:36px;font-size:13px;color:#a3392f;line-height:1.8;">
+          <span style="flex-shrink:0;font-size:16px;">⚠️</span>
+          <span id="contact-error-text">送信に失敗しました。時間をおいて再度お試しいただくか、お電話にてお問い合わせください。</span>
         </div>
 
-        <form id="contact-form" novalidate>
+        <form id="contact-form" action="send-contact.php" method="post" novalidate>
+
+          <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
+            <label for="f-website">Website</label>
+            <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="form_ts" id="f-form-ts">
+          <input type="hidden" name="recaptcha_token" id="f-recaptcha-token">
 
           <div class="form-section">
             <h2 class="form-section-heading">お客様情報</h2>
@@ -157,7 +164,7 @@
           </div>
 
           <button type="submit" class="form-submit-btn">
-            送信する
+            <span class="form-submit-label">送信する</span>
             <span aria-hidden="true">→</span>
           </button>
 
@@ -165,8 +172,8 @@
 
         <div id="contact-success" class="form-success">
           <div class="form-success-icon">✓</div>
-          <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#4d6b2f;margin:0 0 12px;">お問い合わせ内容をご確認いただきありがとうございます</h2>
-          <p style="font-size:14px;color:#5c5849;line-height:1.9;margin:0 0 24px;">現在オンラインでの送信システムを準備中のため、この内容はまだ送信されておりません。<br>お手数をおかけしますが、お問い合わせはお電話またはメールにて承っております。</p>
+          <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#4d6b2f;margin:0 0 12px;">お問い合わせを受け付けました</h2>
+          <p style="font-size:14px;color:#5c5849;line-height:1.9;margin:0 0 24px;">お問い合わせいただきありがとうございます。内容を確認のうえ、担当者よりご連絡させていただきます。お急ぎの場合は、お電話にてお問い合わせください。</p>
           <div style="display:flex;flex-direction:column;gap:10px;align-items:center;">
             <a class="navlink" href="tel:09010397162" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#4d6b2f;">090-1039-7162</a>
             <a class="navlink" href="mailto:uenoyama.saikaen@gmail.com" style="font-size:14px;color:#5c5849;">uenoyama.saikaen@gmail.com</a>
@@ -204,6 +211,7 @@
 
 </div>
 
+<script src="recaptcha-config.js"></script>
 <script src="main.js"></script>
 
 </body>
