@@ -22,6 +22,26 @@ body{margin:0;background:url('assets/bg.jpg') center 80%/cover no-repeat;}
 .news-title{font-size:15px;color:#3f4a33;font-weight:500;flex:1;min-width:0;}
 .news-arrow{margin-left:auto;flex-shrink:0;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#edf3e4;color:#5e8c3a;font-size:12px;}
 
+/* ── News cards (expandable, with body content) ── */
+details.news-card>summary{list-style:none;cursor:pointer;}
+details.news-card>summary::-webkit-details-marker{display:none;}
+details.news-card[open]>summary .news-arrow{transform:rotate(45deg);}
+.news-card-body{padding:4px 28px 28px;border-bottom:1px solid #edf3e4;font-size:14px;color:#5c5849;line-height:2;}
+.news-card-body p{margin:0 0 16px;}
+.news-card-body p:last-child{margin-bottom:0;}
+.news-card-facts{margin:0 0 18px;}
+.news-card-facts-row{display:flex;gap:16px;padding:8px 0;border-bottom:1px dashed #e6dfc8;}
+.news-card-facts-row:last-child{border-bottom:none;}
+.news-card-facts-label{flex:0 0 84px;font-weight:700;color:#4d6b2f;font-size:13.5px;}
+.news-card-facts-value{flex:1;color:#5c5849;font-size:13.5px;line-height:1.8;}
+.news-card-notice{background:#f7f9f0;border:1px solid #e2ebd4;border-radius:12px;padding:18px 22px;margin:18px 0;}
+.news-card-notice-title{font-weight:700;color:#4d6b2f;font-size:13.5px;margin:0 0 10px;}
+.news-card-notice p{margin:0 0 10px;font-size:13.5px;line-height:1.85;}
+.news-card-notice p:last-child{margin-bottom:0;}
+.news-card-notice ul{margin:0;padding-left:1.2em;font-size:13.5px;line-height:1.9;color:#5c5849;}
+.news-card-notice li{margin-bottom:6px;}
+.news-card-notice li:last-child{margin-bottom:0;}
+
 /* ── Layout classes ── */
 .header-inner{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:26px;position:relative;}
 .header-nav{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:14px;font-weight:500;white-space:nowrap;}
@@ -246,6 +266,7 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 /* ── News arrow nudge ── */
 .news-arrow { transition: background .18s, transform .2s; }
 .news-row:hover .news-arrow { transform: translateX(3px); }
+details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) translateX(2px); }
 
 /* ── Reservation form ── */
 .form-card{background:#fff;border:1.5px solid #e2ebd4;border-radius:22px;padding:44px 46px;box-shadow:0 12px 30px rgba(90,120,60,0.08);}
@@ -343,11 +364,16 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 
 /* ── Furusato nozei page ── */
 .furusato-hero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden;}
-.furusato-feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-.furusato-feature-card{background:#fff;border:1.5px solid #e2ebd4;border-radius:18px;padding:30px 26px;}
-.furusato-feature-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#eef6e2;margin-bottom:18px;}
 .furusato-feature-heading{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16.5px;color:#3f5a28;margin:0 0 10px;}
 .furusato-feature-text{font-size:13.5px;color:#5c5849;line-height:1.9;margin:0;}
+.furusato-review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.furusato-review-card{position:relative;background:#fff;border:1.5px solid #e2ebd4;border-radius:18px;padding:34px 30px 26px;}
+.furusato-review-quote-mark{display:block;font-family:'Shippori Mincho',serif;font-size:44px;line-height:1;color:#cdb96a;margin-bottom:4px;}
+.furusato-review-text{font-family:'Shippori Mincho',serif;font-size:15px;color:#4a4739;line-height:2;margin:0 0 22px;}
+.furusato-review-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:16px;border-top:1px solid #eee6d2;}
+.furusato-review-attr{font-size:12px;color:#8a8470;}
+.furusato-review-source{font-size:11.5px;color:#8a8470;text-decoration:none;white-space:nowrap;}
+.furusato-review-source:hover{color:#4d6b2f;}
 .furusato-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
 .furusato-card{position:relative;display:flex;flex-direction:column;gap:14px;background:#fff;border:1.5px solid #e5e2d4;border-radius:16px;padding:24px 20px 20px;text-decoration:none;color:inherit;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;}
 .furusato-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--fc,#7bb04f);}
@@ -366,13 +392,15 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 .page-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;overflow:hidden;}
 
 /* ── Torikumi (our commitment) page ── */
-.torikumi-voice{display:grid;grid-template-columns:0.85fr 1.15fr;gap:44px;align-items:center;}
-.torikumi-voice-img{border-radius:18px;overflow:hidden;box-shadow:0 16px 34px rgba(90,80,40,0.16);}
-.torikumi-voice-img img{width:100%;display:block;}
-.torikumi-voice-quote{font-family:'Shippori Mincho',serif;font-size:17px;color:#3f5a28;line-height:2;margin:0 0 18px;}
-.torikumi-voice-name{font-size:13px;color:#8a8470;}
-
-.furusato-feature-grid--2col{grid-template-columns:repeat(2,1fr);max-width:760px;}
+.torikumi-proof{display:grid;grid-template-columns:0.8fr 1.2fr;gap:44px;align-items:stretch;}
+.torikumi-proof-photo{position:relative;min-height:340px;border-radius:18px;overflow:hidden;box-shadow:0 16px 34px rgba(90,80,40,0.16);}
+.torikumi-proof-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+.torikumi-proof-caption{position:absolute;left:18px;bottom:18px;background:rgba(20,30,10,0.55);backdrop-filter:blur(3px);color:#fff;font-size:12.5px;font-weight:500;letter-spacing:.03em;padding:8px 16px;border-radius:30px;}
+.torikumi-cert-list{display:flex;flex-direction:column;gap:22px;justify-content:center;}
+.torikumi-cert-card{display:flex;align-items:center;gap:20px;background:#fff;border:1.5px solid #e2ebd4;border-radius:18px;padding:22px 26px;}
+.torikumi-cert-thumb{flex-shrink:0;width:76px;height:104px;border-radius:4px;overflow:hidden;border:4px solid #fff;outline:1px solid #e6dfc8;box-shadow:0 6px 16px rgba(60,90,40,0.22);transform:rotate(-3deg);}
+.torikumi-cert-card:nth-child(2) .torikumi-cert-thumb{transform:rotate(3deg);}
+.torikumi-cert-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
 
 /* ── Purchase flow (hanbai page) ── */
 .flow-grid{display:grid;grid-template-columns:1fr 48px 1fr 48px 1fr;align-items:center;}
@@ -395,17 +423,19 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 }
 
 @media (max-width:768px){
-  .torikumi-voice{grid-template-columns:1fr;gap:26px;}
+  .torikumi-proof{grid-template-columns:1fr;gap:26px;}
+  .torikumi-proof-photo{min-height:260px;}
   .flow-grid{grid-template-columns:1fr;gap:14px;}
   .flow-connector{transform:rotate(90deg);}
 }
 
 @media (max-width:480px){
   .method-grid{grid-template-columns:1fr;}
+  .torikumi-cert-card{flex-direction:column;text-align:center;padding:24px 20px;}
 }
 
 /* ── Access page ── */
-.access-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(160deg,#33481f 0%,#4d6b2f 50%,#6a9a44 100%);}
+.access-hero{position:relative;min-height:300px;display:flex;align-items:flex-end;overflow:hidden;}
 .access-hero-glow{position:absolute;inset:0;background:radial-gradient(circle at 12% 10%,rgba(205,238,160,0.16),transparent 45%),radial-gradient(circle at 88% 92%,rgba(255,255,255,0.08),transparent 40%);pointer-events:none;}
 .access-route-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:44px;align-items:start;}
 .route-card{background:#fff;border:1.5px solid #e5e2d4;border-radius:16px;padding:24px 26px;margin-bottom:18px;}
@@ -414,27 +444,16 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 .route-icon{width:40px;height:40px;border-radius:10px;background:#eef6e2;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .route-card-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#3f5a28;}
 .route-card-text{font-size:13.5px;color:#5c5849;line-height:1.9;margin:0;}
-.landmark-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.landmark-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(90,80,40,0.10);}
-.landmark-card-img{aspect-ratio:3/4;overflow:hidden;background:#ece6d2;}
-.landmark-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
-.landmark-card:hover .landmark-card-img img{transform:scale(1.05);}
-.landmark-card-body{padding:20px 22px 26px;}
-.landmark-card-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16.5px;color:#3f5a28;margin:0 0 8px;line-height:1.5;}
-.landmark-card-text{font-size:13px;color:#5c5849;line-height:1.85;margin:0;}
-
 @media (max-width:1024px){
   .access-route-grid{grid-template-columns:1fr;}
-  .landmark-grid{grid-template-columns:1fr 1fr 1fr;gap:16px;}
 }
 
 @media (max-width:768px){
   .access-hero{min-height:260px;}
-  .landmark-grid{grid-template-columns:1fr;gap:20px;}
 }
 
 @media (max-width:768px){
-  .furusato-feature-grid{grid-template-columns:1fr;}
+  .furusato-review-grid{grid-template-columns:1fr;}
   .furusato-grid{grid-template-columns:1fr;gap:12px;}
   .furusato-card{display:grid;grid-template-columns:1fr auto;column-gap:16px;row-gap:4px;align-items:center;padding:16px 20px;}
   .furusato-card::before{top:0;left:0;right:auto;bottom:0;width:4px;height:auto;}

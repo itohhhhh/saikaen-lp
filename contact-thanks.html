@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>お問い合わせ | 上の山彩果園</title>
+<title>お問い合わせを受け付けました | 上の山彩果園</title>
+<meta name="robots" content="noindex">
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,15 +21,9 @@
     <img src="assets/pear.png"   class="fruit-deco-item" style="right:calc(50vw + 540px);top:750px; width:620px;opacity:1;animation:fruitDrift1 7.8s ease-in-out infinite;">
     <img src="assets/pear3.png"  class="fruit-deco-item" style="right:calc(50vw + 540px);top:1650px;width:448px;opacity:1;animation:fruitDrift3 9.1s ease-in-out 1.4s infinite;">
     <img src="assets/pear2.png"  class="fruit-deco-item" style="right:calc(50vw + 540px);top:2550px;width:510px;opacity:1;animation:fruitDrift2 8.3s ease-in-out 0.7s infinite;">
-    <img src="assets/apple.png"  class="fruit-deco-item" style="right:calc(50vw + 540px);top:3350px;width:450px;opacity:1;animation:fruitDrift4 7.3s ease-in-out 2.3s infinite;">
-    <img src="assets/pear2.png"  class="fruit-deco-item" style="right:calc(50vw + 540px);top:4200px;width:500px;opacity:1;animation:fruitDrift2 8.5s ease-in-out 1.1s infinite;">
-    <img src="assets/pear3.png"  class="fruit-deco-item" style="right:calc(50vw + 540px);top:5050px;width:416px;opacity:1;animation:fruitDrift1 9.2s ease-in-out 2.7s infinite;">
     <!-- 右側：左端をコンテンツ右端に合わせる（left: 50vw + 540px） -->
     <img src="assets/pear2.png"  class="fruit-deco-item" style="left:calc(50vw + 540px);top:1150px;width:540px;opacity:1;animation:fruitDrift3 8.6s ease-in-out 0.4s infinite;">
     <img src="assets/apple.png"  class="fruit-deco-item" style="left:calc(50vw + 540px);top:2050px;width:460px;opacity:1;animation:fruitDrift1 9.4s ease-in-out 1.8s infinite;">
-    <img src="assets/pear.png"   class="fruit-deco-item" style="left:calc(50vw + 540px);top:2950px;width:615px;opacity:1;animation:fruitDrift4 7.8s ease-in-out 3.1s infinite;">
-    <img src="assets/pear3.png"  class="fruit-deco-item" style="left:calc(50vw + 540px);top:3750px;width:440px;opacity:1;animation:fruitDrift2 8.9s ease-in-out 0.9s infinite;">
-    <img src="assets/pear.png"   class="fruit-deco-item" style="left:calc(50vw + 540px);top:4600px;width:580px;opacity:1;animation:fruitDrift3 8.1s ease-in-out 0.5s infinite;">
   </div>
 
   <!-- ============ HEADER ============ -->
@@ -73,105 +68,34 @@
       <nav aria-label="パンくずリスト" style="display:flex;align-items:center;gap:8px;font-size:13px;color:#8a8470;margin-bottom:24px;">
         <a href="index.html" class="navlink" style="color:#8a8470;">ホーム</a>
         <span aria-hidden="true">/</span>
-        <span style="color:#4d6b2f;font-weight:700;">お問い合わせ</span>
+        <a href="contact.html" class="navlink" style="color:#8a8470;">お問い合わせ</a>
+        <span aria-hidden="true">/</span>
+        <span style="color:#4d6b2f;font-weight:700;">送信完了</span>
       </nav>
       <div class="section-title-left" style="margin-bottom:0;">
         <span class="section-title-eyebrow">CONTACT</span>
-        <h1 class="section-title-bar">お問い合わせ</h1>
+        <h1 class="section-title-bar">送信が完了しました</h1>
       </div>
-      <p style="font-size:14.5px;color:#5c5849;margin:22px 0 0;line-height:1.9;">果物のご購入・ご予約に関するご質問や、ふるさと納税について、その他ご不明な点がございましたら、下記フォームまたはお電話・メールにてお気軽にお問い合わせください。</p>
     </div>
   </section>
 
-  <!-- ============ お問い合わせフォーム ============ -->
+  <!-- ============ 完了メッセージ ============ -->
   <section style="position:relative;padding:44px 28px 100px;background:transparent;">
     <div style="max-width:760px;margin:0 auto;">
-
       <div class="reveal form-card">
-
-        <div style="display:flex;flex-wrap:wrap;gap:28px;margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid #eee7d6;">
-          <div style="display:flex;align-items:center;gap:14px;">
-            <img src="assets/s12.png" alt="" style="height:30px;width:30px;display:block;">
-            <div>
-              <div style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:22px;color:#4d6b2f;letter-spacing:.02em;white-space:nowrap;">090-1039-7162</div>
-              <div style="font-size:12px;color:#8a8470;">受付時間 9:00〜17:00　不定休</div>
-            </div>
+        <div class="form-success visible">
+          <div class="form-success-icon">✓</div>
+          <h2 style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#4d6b2f;margin:0 0 12px;">お問い合わせを受け付けました</h2>
+          <p style="font-size:14px;color:#5c5849;line-height:1.9;margin:0 0 24px;">お問い合わせいただきありがとうございます。内容を確認のうえ、担当者よりご連絡させていただきます。お急ぎの場合は、お電話にてお問い合わせください。</p>
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:center;margin-bottom:32px;">
+            <a class="navlink" href="tel:09010397162" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20px;color:#4d6b2f;">090-1039-7162</a>
+            <a class="navlink" href="mailto:uenoyama.saikaen@gmail.com" style="font-size:14px;color:#5c5849;">uenoyama.saikaen@gmail.com</a>
           </div>
-          <div style="display:flex;align-items:center;gap:14px;">
-            <img src="assets/s13.png" alt="" style="height:30px;width:30px;display:block;">
-            <span style="font-size:15px;color:#5c5849;"><span>uenoyama.saikaen</span><span>&#64;</span><span>gmail</span><span>.com</span></span>
-          </div>
+          <a class="btn" href="index.html" style="display:inline-flex;align-items:center;gap:12px;background:#4d6b2f;color:#fff;text-decoration:none;font-weight:700;font-size:14.5px;padding:13px 28px;border-radius:34px;">
+            トップページに戻る
+          </a>
         </div>
-
-        <div id="contact-error" style="display:none;gap:12px;align-items:flex-start;background:#fdeceb;border:1px solid #f3c6c2;border-radius:12px;padding:16px 18px;margin-bottom:36px;font-size:13px;color:#a3392f;line-height:1.8;">
-          <span style="flex-shrink:0;font-size:16px;">⚠️</span>
-          <span id="contact-error-text">送信に失敗しました。時間をおいて再度お試しいただくか、お電話にてお問い合わせください。</span>
-        </div>
-
-        <form id="contact-form" action="send-contact.php" method="post" novalidate>
-
-          <div style="position:absolute;left:-9999px;top:-9999px;" aria-hidden="true">
-            <label for="f-website">Website</label>
-            <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
-          </div>
-          <input type="hidden" name="form_ts" id="f-form-ts">
-          <input type="hidden" name="recaptcha_token" id="f-recaptcha-token">
-
-          <div class="form-section">
-            <h2 class="form-section-heading">お客様情報</h2>
-            <div class="form-grid-2">
-              <div class="form-field">
-                <label for="f-name">お名前<span class="form-required">必須</span></label>
-                <input type="text" id="f-name" name="name" class="form-input" placeholder="例：郡山 太郎" required>
-              </div>
-              <div class="form-field">
-                <label for="f-kana">フリガナ<span class="form-optional">任意</span></label>
-                <input type="text" id="f-kana" name="kana" class="form-input" placeholder="例：コオリヤマ タロウ">
-              </div>
-              <div class="form-field">
-                <label for="f-tel">電話番号<span class="form-optional">任意</span></label>
-                <input type="tel" id="f-tel" name="tel" class="form-input" placeholder="例：090-1234-5678">
-              </div>
-              <div class="form-field">
-                <label for="f-email">メールアドレス<span class="form-required">必須</span></label>
-                <input type="email" id="f-email" name="email" class="form-input" placeholder="例：example@mail.com" required>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <h2 class="form-section-heading">お問い合わせ内容</h2>
-            <div class="form-field">
-              <label>お問い合わせ種別<span class="form-required">必須</span></label>
-              <div class="form-radio-group">
-                <label class="form-radio"><input type="radio" name="category" value="果物の購入について" required>果物の購入について</label>
-                <label class="form-radio"><input type="radio" name="category" value="ご予約について" required>ご予約について</label>
-                <label class="form-radio"><input type="radio" name="category" value="ふるさと納税について" required>ふるさと納税について</label>
-                <label class="form-radio"><input type="radio" name="category" value="その他" required>その他</label>
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="f-message">お問い合わせ内容<span class="form-required">必須</span></label>
-              <textarea id="f-message" name="message" class="form-textarea" placeholder="ご質問・ご要望などをご記入ください。" required></textarea>
-            </div>
-          </div>
-
-          <div class="form-section">
-            <label class="form-consent">
-              <input type="checkbox" name="agree" required>
-              <span><a class="navlink" href="privacy.html" target="_blank" rel="noopener" style="color:#4d6b2f;font-weight:700;">プライバシーポリシー</a>の内容に同意のうえ、送信します。</span>
-            </label>
-          </div>
-
-          <button type="submit" class="form-submit-btn">
-            <span class="form-submit-label">送信する</span>
-            <span aria-hidden="true">→</span>
-          </button>
-
-        </form>
-
       </div>
-
     </div>
   </section>
 
@@ -201,7 +125,6 @@
 
 </div>
 
-<script src="recaptcha-config.js"></script>
 <script src="main.js"></script>
 
 </body>

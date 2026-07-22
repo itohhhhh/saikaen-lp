@@ -108,7 +108,7 @@ if ('IntersectionObserver' in window) {
 // News category filter
 var newsFilterBtns = document.querySelectorAll('.news-filter-btn');
 if (newsFilterBtns.length) {
-  var newsRows = document.querySelectorAll('.news-row[data-cat]');
+  var newsRows = document.querySelectorAll('[data-cat]');
   newsFilterBtns.forEach(function(btn) {
     btn.addEventListener('click', function() {
       newsFilterBtns.forEach(function(b) { b.classList.remove('active'); });
@@ -149,14 +149,13 @@ function getRecaptchaToken(action) {
 }
 
 // フォーム送信共通処理：バリデーション → reCAPTCHA v3 トークン取得 → fetch 送信
-function submitProtectedForm(form, recaptchaAction) {
+function submitProtectedForm(form, recaptchaAction, thanksUrl) {
   var idPrefix = form.id.replace(/-form$/, '');
   var submitBtn = form.querySelector('.form-submit-btn');
   var submitLabel = form.querySelector('.form-submit-label');
   var originalLabel = submitLabel ? submitLabel.textContent : '';
   var errorBox = document.getElementById(idPrefix + '-error');
   var errorText = document.getElementById(idPrefix + '-error-text');
-  var successBox = document.getElementById(idPrefix + '-success');
   var tokenField = form.querySelector('[name="recaptcha_token"]');
   var formTsField = form.querySelector('[name="form_ts"]');
 
@@ -193,11 +192,7 @@ function submitProtectedForm(form, recaptchaAction) {
       .then(function(res) { return res.json(); })
       .then(function(data) {
         if (data && data.success) {
-          form.style.display = 'none';
-          if (successBox) {
-            successBox.classList.add('visible');
-            successBox.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          window.location.href = thanksUrl;
         } else {
           showError((data && data.message) || '送信に失敗しました。時間をおいて再度お試しいただくか、お電話にてお問い合わせください。');
         }
@@ -294,7 +289,7 @@ if (yoyakuForm) {
     destUpdateAddBtn();
   }
 
-  submitProtectedForm(yoyakuForm, 'yoyaku');
+  submitProtectedForm(yoyakuForm, 'yoyaku', 'yoyaku-thanks.html');
 }
 
 // Contact form: radio toggle styling + submit
@@ -308,7 +303,7 @@ if (contactForm) {
     });
   });
 
-  submitProtectedForm(contactForm, 'contact');
+  submitProtectedForm(contactForm, 'contact', 'contact-thanks.html');
 }
 
 // Harvest calendar bar animation

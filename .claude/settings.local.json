@@ -34,7 +34,19 @@
       "Bash(node --check \"c:/Users/S/saikaen-lp/main.js\")",
       "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --screenshot=C:/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/224bf052-3d15-4c71-a8e3-963ace1d3f26/scratchpad/yoyaku_dest.png --window-size=1400,2200 --hide-scrollbars http://localhost:8080/yoyaku.html)",
       "Bash(curl -sI \"https://zipcloud.ibsnet.co.jp/api/search?zipcode=9631303\")",
-      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --screenshot=C:/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/224bf052-3d15-4c71-a8e3-963ace1d3f26/scratchpad/news_index.png --window-size=1400,900 --hide-scrollbars --virtual-time-budget=2000 'http://localhost:8080/index.html#news')"
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --screenshot=C:/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/224bf052-3d15-4c71-a8e3-963ace1d3f26/scratchpad/news_index.png --window-size=1400,900 --hide-scrollbars --virtual-time-budget=2000 'http://localhost:8080/index.html#news')",
+      "Bash(taskkill //PID 1952 //F)",
+      "WebFetch(domain:www.furusato-tax.jp)",
+      "WebFetch(domain:review.rakuten.co.jp)",
+      "WebFetch(domain:furusato.jreast.co.jp)",
+      "WebFetch(domain:jreastmall.queue-it.net)",
+      "WebFetch(domain:furusato.jal.co.jp)",
+      "WebFetch(domain:search.rakuten.co.jp)",
+      "WebFetch(domain:furunavi.jp)",
+      "WebFetch(domain:furusato.ana.co.jp)",
+      "WebFetch(domain:dshopping-furusato.docomo.ne.jp)",
+      "WebSearch",
+      "WebFetch(domain:event.rakuten.co.jp)"
     ]
   }
 }
