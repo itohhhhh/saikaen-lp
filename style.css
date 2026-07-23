@@ -511,7 +511,6 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 .fruit-deco {
   position: absolute;
   inset: 0;
-  bottom: 245px;
   pointer-events: none;
   z-index: 2;
   overflow: hidden;

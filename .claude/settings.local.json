@@ -55,7 +55,9 @@
       "Bash(python \"C:/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/22d4cf9b-4cf4-42be-ae0a-e53cb1a54f1d/scratchpad/optimize_images2.py\")",
       "Bash(python \"C:/Users/S/AppData/Local/Temp/claude/c--Users-S-saikaen-lp/22d4cf9b-4cf4-42be-ae0a-e53cb1a54f1d/scratchpad/rename_refs.py\")",
       "Bash(grep -v \"^originals$\")",
-      "Bash(pkill -f \"http.server 8090\")"
+      "Bash(pkill -f \"http.server 8090\")",
+      "Bash(node -e \"console.log\\(require\\('puppeteer'\\)\\)\")",
+      "Bash(python -)"
     ]
   }
 }
