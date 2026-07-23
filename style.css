@@ -19,32 +19,32 @@ body{margin:0;background:url('assets/bg.jpg') center 80%/cover no-repeat;}
 .news-row:last-child{border-bottom:none;}
 .news-row:hover{background:#f7fbf1;}
 .news-meta{display:flex;align-items:center;gap:12px;flex-shrink:0;}
-.news-title{font-size:15px;color:#3f4a33;font-weight:500;flex:1;min-width:0;}
-.news-arrow{margin-left:auto;flex-shrink:0;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#edf3e4;color:#5e8c3a;font-size:12px;}
+.news-title{font-size:16.5px;color:#3f4a33;font-weight:500;flex:1;min-width:0;}
+.news-arrow{margin-left:auto;flex-shrink:0;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#edf3e4;color:#5e8c3a;font-size:13.5px;}
 
 /* ── News cards (expandable, with body content) ── */
 details.news-card>summary{list-style:none;cursor:pointer;}
 details.news-card>summary::-webkit-details-marker{display:none;}
 details.news-card[open]>summary .news-arrow{transform:rotate(45deg);}
-.news-card-body{padding:4px 28px 28px;border-bottom:1px solid #edf3e4;font-size:14px;color:#5c5849;line-height:2;}
+.news-card-body{padding:4px 28px 28px;border-bottom:1px solid #edf3e4;font-size:15.5px;color:#5c5849;line-height:2;}
 .news-card-body p{margin:0 0 16px;}
 .news-card-body p:last-child{margin-bottom:0;}
 .news-card-facts{margin:0 0 18px;}
 .news-card-facts-row{display:flex;gap:16px;padding:8px 0;border-bottom:1px dashed #e6dfc8;}
 .news-card-facts-row:last-child{border-bottom:none;}
-.news-card-facts-label{flex:0 0 84px;font-weight:700;color:#4d6b2f;font-size:13.5px;}
-.news-card-facts-value{flex:1;color:#5c5849;font-size:13.5px;line-height:1.8;}
+.news-card-facts-label{flex:0 0 84px;font-weight:700;color:#4d6b2f;font-size:15px;}
+.news-card-facts-value{flex:1;color:#5c5849;font-size:15px;line-height:1.8;}
 .news-card-notice{background:#f7f9f0;border:1px solid #e2ebd4;border-radius:12px;padding:18px 22px;margin:18px 0;}
-.news-card-notice-title{font-weight:700;color:#4d6b2f;font-size:13.5px;margin:0 0 10px;}
-.news-card-notice p{margin:0 0 10px;font-size:13.5px;line-height:1.85;}
+.news-card-notice-title{font-weight:700;color:#4d6b2f;font-size:15px;margin:0 0 10px;}
+.news-card-notice p{margin:0 0 10px;font-size:15px;line-height:1.85;}
 .news-card-notice p:last-child{margin-bottom:0;}
-.news-card-notice ul{margin:0;padding-left:1.2em;font-size:13.5px;line-height:1.9;color:#5c5849;}
+.news-card-notice ul{margin:0;padding-left:1.2em;font-size:15px;line-height:1.9;color:#5c5849;}
 .news-card-notice li{margin-bottom:6px;}
 .news-card-notice li:last-child{margin-bottom:0;}
 
 /* ── Layout classes ── */
 .header-inner{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;gap:26px;position:relative;}
-.header-nav{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:14px;font-weight:500;white-space:nowrap;}
+.header-nav{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:15.5px;font-weight:500;white-space:nowrap;}
 .header-logo{height:82px;width:auto;display:block;}
 .hero-slide-syuukaku{object-position:center;}
 .hero-grid{max-width:1180px;margin:0 auto;padding:60px 28px 80px;display:grid;grid-template-columns:1.08fr 0.92fr;gap:40px;align-items:center;position:relative;z-index:2;}
@@ -61,7 +61,7 @@ details.news-card[open]>summary .news-arrow{transform:rotate(45deg);}
 .torikumi-item--rev .torikumi-item-body{background:#edf4e2;}
 
 .torikumi-item-heading{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:26px;color:#3f5a28;margin:0 0 20px;line-height:1.4;letter-spacing:.04em;padding-left:14px;border-left:3px solid #7bb04f;}
-.torikumi-item-text{font-size:15px;color:#62604f;margin:0;line-height:2.1;}
+.torikumi-item-text{font-size:16.5px;color:#62604f;margin:0;line-height:2.1;}
 .hanbai-content-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:40px;align-items:center;position:relative;z-index:2;}
 .variety-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:42px;position:relative;z-index:2;}
 .cards-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:24px;align-items:stretch;}
@@ -82,7 +82,7 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
 .mobile-menu{display:none;position:fixed;top:93px;left:0;right:0;background:rgba(255,255,255,0.97);backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(90,120,60,0.12);z-index:49;flex-direction:column;padding:6px 28px 20px;}
 .mobile-menu.open{display:flex;}
-.mobile-menu a{display:block;padding:14px 4px;font-size:16px;font-weight:500;color:#4a4636;text-decoration:none;border-bottom:1px solid #edf3e4;}
+.mobile-menu a{display:block;padding:14px 4px;font-size:17.5px;font-weight:500;color:#4a4636;text-decoration:none;border-bottom:1px solid #edf3e4;}
 .mobile-menu a:last-child{border-bottom:none;}
 .mobile-menu a:hover{color:#5e8c3a;}
 
@@ -90,32 +90,56 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 .hcal{overflow-x:auto;-webkit-overflow-scrolling:touch;}
 .hcal-inner{min-width:520px;}
 .hcal-grid-header{display:grid;grid-template-columns:148px repeat(5,1fr);gap:3px;margin-bottom:6px;}
-.hcal-mth{display:flex;align-items:center;justify-content:center;font-family:'Shippori Mincho',serif;font-size:15px;font-weight:600;padding:7px 4px;border-radius:6px;}
+.hcal-mth{display:flex;align-items:center;justify-content:center;font-family:'Shippori Mincho',serif;font-size:16.5px;font-weight:600;padding:7px 4px;border-radius:6px;}
 .hcal-mth-aug{background:#e8f4d9;color:#4d6b2f;}
 .hcal-mth-sep{background:#f5f0e0;color:#7a6020;}
 .hcal-mth-oct{background:#f0e8d4;color:#8a5020;}
 .hcal-mth-nov{background:#e4efd4;color:#4a6830;}
 .hcal-mth-dec{background:#e6e2d8;color:#605848;}
 .hcal-cat-row{display:flex;align-items:center;gap:10px;padding:14px 0 4px;}
-.hcal-cat-label{font-family:'Shippori Mincho',serif;font-size:11.5px;color:#8a6020;letter-spacing:.1em;white-space:nowrap;}
+.hcal-cat-label{font-family:'Shippori Mincho',serif;font-size:13px;color:#8a6020;letter-spacing:.1em;white-space:nowrap;}
 .hcal-cat-line{flex:1;height:1px;background:rgba(180,155,80,0.22);}
 .hcal-vrow{display:grid;grid-template-columns:148px repeat(5,1fr);gap:3px;min-height:50px;align-items:center;border-radius:6px;padding:3px 0;}
 .hcal-vrow:hover{background:rgba(238,248,228,0.55);}
 .hcal-vname{grid-column:1;display:flex;flex-direction:column;gap:2px;padding-right:10px;}
-.hcal-vname>span:first-child{font-size:13px;color:#3a4230;font-weight:700;font-family:'Zen Maru Gothic',sans-serif;white-space:nowrap;}
-.hcal-period{font-size:9.5px;color:#8a6020;font-weight:600;}
-.hcal-desc{font-size:9.5px;color:#8a8470;line-height:1.35;}
+.hcal-vname>span:first-child{font-size:14.5px;color:#3a4230;font-weight:700;font-family:'Zen Maru Gothic',sans-serif;white-space:nowrap;}
+.hcal-period{font-size:11px;color:#8a6020;font-weight:600;}
+.hcal-desc{font-size:11px;color:#8a8470;line-height:1.35;}
 .hcal-bar{border-radius:20px;height:26px;display:flex;align-items:center;gap:5px;padding:0 9px;overflow:hidden;align-self:center;}
 .hcal-bar-nashi{background:linear-gradient(90deg,#7bb04f,#4d8030);}
 .hcal-bar-seiyou{background:linear-gradient(90deg,#d4b04a,#b89030);}
 .hcal-bar-ringo{background:linear-gradient(90deg,#d4876a,#b86040);}
 .hcal-bar-teishi{background:rgba(190,188,178,0.3);border:1.5px dashed rgba(160,158,148,0.5);}
-.hcal-badge-limited{font-size:9px;background:rgba(255,255,255,0.22);color:#fff;border-radius:10px;padding:1px 6px;white-space:nowrap;flex-shrink:0;}
-.hcal-badge-teishi{font-size:9px;background:rgba(160,158,148,0.12);color:#a0a098;border:1px solid rgba(160,158,148,0.3);border-radius:10px;padding:1px 6px;white-space:nowrap;flex-shrink:0;}
+.hcal-badge-limited{font-size:10.5px;background:rgba(255,255,255,0.22);color:#fff;border-radius:10px;padding:1px 6px;white-space:nowrap;flex-shrink:0;}
+.hcal-badge-teishi{font-size:10.5px;background:rgba(160,158,148,0.12);color:#a0a098;border:1px solid rgba(160,158,148,0.3);border-radius:10px;padding:1px 6px;white-space:nowrap;flex-shrink:0;}
+
+/* ── Lightbox (zoomable images) ── */
+.lightbox-img{cursor:zoom-in;}
+.lightbox-hint{position:absolute;right:32px;bottom:32px;display:inline-flex;align-items:center;gap:6px;background:rgba(30,40,20,0.72);color:#fff;font-size:12.5px;font-weight:500;letter-spacing:.02em;padding:7px 14px 7px 12px;border-radius:20px;pointer-events:none;backdrop-filter:blur(3px);}
+@media (max-width:768px){
+  .lightbox-hint{right:24px;bottom:24px;font-size:11.5px;padding:6px 12px 6px 10px;}
+}
+.lightbox-overlay{position:fixed;inset:0;background:rgba(18,22,12,0.88);display:flex;align-items:center;justify-content:center;padding:48px;z-index:200;opacity:0;visibility:hidden;transition:opacity .25s ease;}
+.lightbox-overlay.open{opacity:1;visibility:visible;}
+.lightbox-overlay-img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 24px 64px rgba(0,0,0,0.45);display:block;}
+.lightbox-close{position:absolute;top:22px;right:26px;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);color:#fff;font-size:22px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .18s;}
+.lightbox-close:hover{background:rgba(255,255,255,0.24);}
+@media (max-width:768px){
+  .lightbox-overlay{padding:16px 16px 60px;}
+  .lightbox-close{top:12px;right:14px;width:42px;height:42px;font-size:20px;}
+}
+
+/* ── Store hours banner ── */
+.hours-grid-item{border-left:1px solid rgba(255,255,255,0.16);padding-left:28px;}
+@media (max-width:768px){
+  .hours-card{padding:30px 24px 28px !important;border-radius:20px !important;}
+  .hours-grid{grid-template-columns:1fr !important;gap:20px !important;}
+  .hours-grid-item{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,0.16);padding-top:18px;}
+}
 
 /* ── Section title variant (left-aligned with vertical bar) ── */
 .section-title-left{margin-bottom:46px;}
-.section-title-eyebrow{display:block;font-family:'Shippori Mincho',serif;font-size:12.5px;color:#c4993a;letter-spacing:.14em;margin-bottom:10px;}
+.section-title-eyebrow{display:block;font-family:'Shippori Mincho',serif;font-size:14px;color:#c4993a;letter-spacing:.14em;margin-bottom:10px;}
 .section-title-bar{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:30px;color:#4d6b2f;margin:0;padding-left:16px;border-left:4px solid #7bb04f;letter-spacing:.06em;}
 
 /* ── Scroll Reveal ── */
@@ -184,7 +208,7 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   section{padding-left:16px !important;padding-right:16px !important;}
 
   /* section title variant */
-  .section-title-bar{font-size:22px;}
+  .section-title-bar{font-size:23.5px;}
 }
 
 @media (max-width:480px){
@@ -272,28 +296,28 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 .form-card{background:#fff;border:1.5px solid #e2ebd4;border-radius:22px;padding:44px 46px;box-shadow:0 12px 30px rgba(90,120,60,0.08);}
 .form-section{margin-bottom:36px;}
 .form-section:last-of-type{margin-bottom:0;}
-.form-section-heading{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:#4d6b2f;margin:0 0 20px;padding-left:12px;border-left:3px solid #7bb04f;}
+.form-section-heading{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16.5px;color:#4d6b2f;margin:0 0 20px;padding-left:12px;border-left:3px solid #7bb04f;}
 .form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .form-field{display:flex;flex-direction:column;gap:8px;margin-bottom:22px;}
 .form-field:last-child{margin-bottom:0;}
-.form-field label{font-size:13.5px;font-weight:700;color:#4a4636;display:flex;align-items:center;gap:8px;}
-.form-required{font-size:10.5px;font-weight:700;color:#fff;background:#c96a4a;border-radius:10px;padding:2px 8px;letter-spacing:.04em;}
-.form-optional{font-size:10.5px;font-weight:700;color:#8a8470;background:#f0ece0;border-radius:10px;padding:2px 8px;letter-spacing:.04em;}
-.form-input,.form-textarea,.form-select{font-family:'Zen Kaku Gothic New',sans-serif;font-size:14.5px;color:#3f4a33;background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:10px;padding:12px 16px;transition:border-color .18s,background .18s;width:100%;}
+.form-field label{font-size:15px;font-weight:700;color:#4a4636;display:flex;align-items:center;gap:8px;}
+.form-required{font-size:12px;font-weight:700;color:#fff;background:#c96a4a;border-radius:10px;padding:2px 8px;letter-spacing:.04em;}
+.form-optional{font-size:12px;font-weight:700;color:#8a8470;background:#f0ece0;border-radius:10px;padding:2px 8px;letter-spacing:.04em;}
+.form-input,.form-textarea,.form-select{font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;color:#3f4a33;background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:10px;padding:12px 16px;transition:border-color .18s,background .18s;width:100%;}
 .form-input:focus,.form-textarea:focus,.form-select:focus{outline:none;border-color:#7bb04f;background:#fff;}
 .form-textarea{resize:vertical;min-height:96px;line-height:1.7;}
-.form-hint{font-size:12px;color:#8a8470;}
+.form-hint{font-size:13.5px;color:#8a8470;}
 .variety-chips{display:flex;flex-wrap:wrap;gap:10px;}
-.variety-chip{position:relative;display:inline-flex;align-items:center;font-size:13.5px;font-weight:600;color:#5c5849;background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:22px;padding:9px 18px;cursor:pointer;transition:background .18s,border-color .18s,color .18s;}
+.variety-chip{position:relative;display:inline-flex;align-items:center;font-size:15px;font-weight:600;color:#5c5849;background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:22px;padding:9px 18px;cursor:pointer;transition:background .18s,border-color .18s,color .18s;}
 .variety-chip input{position:absolute;opacity:0;width:0;height:0;}
 .variety-chip.checked{background:#4d6b2f;border-color:#4d6b2f;color:#fff;}
 .form-radio-group{display:flex;flex-wrap:wrap;gap:12px;}
-.form-radio{position:relative;display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#3f4a33;background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:12px;padding:12px 18px;cursor:pointer;flex:1;min-width:180px;transition:border-color .18s,background .18s;}
+.form-radio{position:relative;display:inline-flex;align-items:center;gap:9px;font-size:15.5px;font-weight:600;color:#3f4a33;background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:12px;padding:12px 18px;cursor:pointer;flex:1;min-width:180px;transition:border-color .18s,background .18s;}
 .form-radio input{accent-color:#4d6b2f;width:16px;height:16px;flex-shrink:0;}
 .form-radio.checked{border-color:#7bb04f;background:#f4faee;}
-.form-consent{display:flex;align-items:flex-start;gap:12px;font-size:13.5px;color:#5c5849;line-height:1.7;}
+.form-consent{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:#5c5849;line-height:1.7;}
 .form-consent input{margin-top:3px;accent-color:#4d6b2f;width:16px;height:16px;flex-shrink:0;}
-.form-submit-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;background:#4d6b2f;color:#fff;border:none;text-decoration:none;font-weight:700;font-size:16px;padding:17px 28px;border-radius:34px;cursor:pointer;box-shadow:0 10px 24px rgba(77,107,47,0.28);}
+.form-submit-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:12px;background:#4d6b2f;color:#fff;border:none;text-decoration:none;font-weight:700;font-size:17.5px;padding:17px 28px;border-radius:34px;cursor:pointer;box-shadow:0 10px 24px rgba(77,107,47,0.28);}
 .form-submit-btn:disabled{opacity:.55;cursor:not-allowed;}
 .form-success{display:none;text-align:center;padding:20px 6px 6px;}
 .form-success.visible{display:block;}
@@ -303,9 +327,9 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 .dest-block{background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:14px;padding:20px 20px 4px;margin-bottom:14px;}
 .dest-block .form-grid-2{margin-bottom:0;}
 .dest-block-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;}
-.dest-block-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13px;color:#4d6b2f;}
-.dest-remove-btn{background:none;border:none;color:#a3392f;font-size:12px;font-weight:700;cursor:pointer;padding:2px 4px;text-decoration:underline;}
-.dest-add-btn{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1.5px solid #7bb04f;color:#4d6b2f;font-weight:700;font-size:13px;padding:10px 20px;border-radius:24px;cursor:pointer;transition:background .18s,color .18s;}
+.dest-block-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;color:#4d6b2f;}
+.dest-remove-btn{background:none;border:none;color:#a3392f;font-size:13.5px;font-weight:700;cursor:pointer;padding:2px 4px;text-decoration:underline;}
+.dest-add-btn{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1.5px solid #7bb04f;color:#4d6b2f;font-weight:700;font-size:14.5px;padding:10px 20px;border-radius:24px;cursor:pointer;transition:background .18s,color .18s;}
 .dest-add-btn:hover{background:#eef6e2;}
 .dest-add-btn:disabled{opacity:.5;cursor:not-allowed;}
 
@@ -313,28 +337,28 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
   .form-card{padding:30px 22px;}
   .form-grid-2{grid-template-columns:1fr;gap:0;}
   .form-radio-group{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-  .form-radio{flex:none;min-width:0;padding:12px 14px;font-size:13.5px;}
+  .form-radio{flex:none;min-width:0;padding:12px 14px;font-size:15px;}
 }
 
 /* ── Product list page ── */
 .product-cat-heading{display:flex;align-items:center;gap:12px;margin:0 0 22px;}
 .product-cat-heading:not(:first-child){margin-top:54px;}
-.product-cat-label{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19px;color:#4d6b2f;white-space:nowrap;}
+.product-cat-label{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:20.5px;color:#4d6b2f;white-space:nowrap;}
 .product-cat-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(123,176,79,0.35),transparent);}
 .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .product-card{position:relative;display:flex;flex-direction:column;background:#fff;border:1.5px solid #e5e2d4;border-radius:18px;padding:26px 24px 24px;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;}
 .product-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--fc,#7bb04f);}
 .product-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(90,80,40,0.12);border-color:#d8d3c0;}
 .product-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:12px;}
-.product-card-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:18px;color:#3f4a33;line-height:1.4;}
-.product-badge{font-size:10.5px;font-weight:700;border-radius:10px;padding:3px 10px;white-space:nowrap;flex-shrink:0;letter-spacing:.02em;margin-top:2px;}
+.product-card-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:19.5px;color:#3f4a33;line-height:1.4;}
+.product-badge{font-size:12px;font-weight:700;border-radius:10px;padding:3px 10px;white-space:nowrap;flex-shrink:0;letter-spacing:.02em;margin-top:2px;}
 .product-badge-open{background:#eef6e2;color:#4d6b2f;}
 .product-badge-limited{background:#fbf1da;color:#a67a1e;}
 .product-badge-sold{background:#f0ece0;color:#8a8470;}
-.product-card-season{display:inline-flex;align-items:center;font-size:12px;color:#8a8470;background:#faf9f4;border-radius:20px;padding:4px 12px;margin-bottom:14px;width:fit-content;}
-.product-card-desc{font-size:13.5px;color:#5c5849;line-height:1.85;margin:0 0 20px;flex:1;}
-.product-card-cta{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#4d6b2f;text-decoration:none;}
-.product-card-cta span{width:24px;height:24px;border-radius:50%;background:#eef6e2;display:flex;align-items:center;justify-content:center;font-size:11px;transition:background .18s,color .18s,transform .2s;}
+.product-card-season{display:inline-flex;align-items:center;font-size:13.5px;color:#8a8470;background:#faf9f4;border-radius:20px;padding:4px 12px;margin-bottom:14px;width:fit-content;}
+.product-card-desc{font-size:15px;color:#5c5849;line-height:1.85;margin:0 0 20px;flex:1;}
+.product-card-cta{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:700;color:#4d6b2f;text-decoration:none;}
+.product-card-cta span{width:24px;height:24px;border-radius:50%;background:#eef6e2;display:flex;align-items:center;justify-content:center;font-size:12.5px;transition:background .18s,color .18s,transform .2s;}
 .product-card:hover .product-card-cta span{background:#4d6b2f;color:#fff;transform:translate(2px,-2px);}
 .product-card-cta.sold{color:#a09c8c;pointer-events:none;}
 .product-card-cta.sold span{background:#f0ece0;color:#a09c8c;}
@@ -347,9 +371,9 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 }
 
 /* ── Law (特定商取引法) page ── */
-.law-table{width:100%;border-collapse:collapse;font-size:14.5px;color:#5c5849;line-height:2;}
+.law-table{width:100%;border-collapse:collapse;font-size:16px;color:#5c5849;line-height:2;}
 .law-table th,.law-table td{padding:26px 28px;border-bottom:1px solid #ece6d2;text-align:left;vertical-align:top;}
-.law-table th{width:200px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13.5px;color:#4d6b2f;background:#faf9f4;white-space:nowrap;padding-right:20px;}
+.law-table th{width:200px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:#4d6b2f;background:#faf9f4;white-space:nowrap;padding-right:20px;}
 .law-table td{padding-left:30px;}
 .law-table tr:first-child th,.law-table tr:first-child td{padding-top:6px;}
 .law-table tr:last-child th,.law-table tr:last-child td{border-bottom:none;padding-bottom:6px;}
@@ -364,25 +388,25 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 
 /* ── Furusato nozei page ── */
 .furusato-hero{position:relative;min-height:340px;display:flex;align-items:flex-end;overflow:hidden;}
-.furusato-feature-heading{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16.5px;color:#3f5a28;margin:0 0 10px;}
-.furusato-feature-text{font-size:13.5px;color:#5c5849;line-height:1.9;margin:0;}
+.furusato-feature-heading{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:18px;color:#3f5a28;margin:0 0 10px;}
+.furusato-feature-text{font-size:15px;color:#5c5849;line-height:1.9;margin:0;}
 .furusato-review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
 .furusato-review-card{position:relative;background:#fff;border:1.5px solid #e2ebd4;border-radius:18px;padding:34px 30px 26px;}
 .furusato-review-quote-mark{display:block;font-family:'Shippori Mincho',serif;font-size:44px;line-height:1;color:#cdb96a;margin-bottom:4px;}
-.furusato-review-text{font-family:'Shippori Mincho',serif;font-size:15px;color:#4a4739;line-height:2;margin:0 0 22px;}
+.furusato-review-text{font-family:'Shippori Mincho',serif;font-size:16.5px;color:#4a4739;line-height:2;margin:0 0 22px;}
 .furusato-review-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:16px;border-top:1px solid #eee6d2;}
-.furusato-review-attr{font-size:12px;color:#8a8470;}
-.furusato-review-source{font-size:11.5px;color:#8a8470;text-decoration:none;white-space:nowrap;}
+.furusato-review-attr{font-size:13.5px;color:#8a8470;}
+.furusato-review-source{font-size:13px;color:#8a8470;text-decoration:none;white-space:nowrap;}
 .furusato-review-source:hover{color:#4d6b2f;}
 .furusato-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
 .furusato-card{position:relative;display:flex;flex-direction:column;gap:14px;background:#fff;border:1.5px solid #e5e2d4;border-radius:16px;padding:24px 20px 20px;text-decoration:none;color:inherit;overflow:hidden;transition:transform .2s,box-shadow .2s,border-color .2s;}
 .furusato-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--fc,#7bb04f);}
 .furusato-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(90,80,40,0.14);border-color:#d8d3c0;}
-.furusato-card-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:#3f4a33;line-height:1.5;}
-.furusato-card-sub{font-size:11.5px;color:#8a8470;}
-.furusato-card-arrow{margin-top:auto;align-self:flex-end;width:30px;height:30px;border-radius:50%;background:#f0ece0;display:flex;align-items:center;justify-content:center;color:#4d6b2f;font-size:13px;transition:background .18s,color .18s,transform .2s;}
+.furusato-card-name{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16.5px;color:#3f4a33;line-height:1.5;}
+.furusato-card-sub{font-size:13px;color:#8a8470;}
+.furusato-card-arrow{margin-top:auto;align-self:flex-end;width:30px;height:30px;border-radius:50%;background:#f0ece0;display:flex;align-items:center;justify-content:center;color:#4d6b2f;font-size:14.5px;transition:background .18s,color .18s,transform .2s;}
 .furusato-card:hover .furusato-card-arrow{background:#4d6b2f;color:#fff;transform:translate(2px,-2px);}
-.furusato-note{display:flex;gap:12px;align-items:flex-start;background:#f4f6ec;border:1px solid #dde6cc;border-radius:12px;padding:16px 18px;font-size:13px;color:#4a5a3a;line-height:1.8;}
+.furusato-note{display:flex;gap:12px;align-items:flex-start;background:#f4f6ec;border:1px solid #dde6cc;border-radius:12px;padding:16px 18px;font-size:14.5px;color:#4a5a3a;line-height:1.8;}
 
 @media (max-width:1024px){
   .furusato-grid{grid-template-columns:repeat(3,1fr);}
@@ -395,7 +419,7 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 .torikumi-proof{display:grid;grid-template-columns:0.8fr 1.2fr;gap:44px;align-items:stretch;}
 .torikumi-proof-photo{position:relative;min-height:340px;border-radius:18px;overflow:hidden;box-shadow:0 16px 34px rgba(90,80,40,0.16);}
 .torikumi-proof-photo img{width:100%;height:100%;object-fit:cover;display:block;}
-.torikumi-proof-caption{position:absolute;left:18px;bottom:18px;background:rgba(20,30,10,0.55);backdrop-filter:blur(3px);color:#fff;font-size:12.5px;font-weight:500;letter-spacing:.03em;padding:8px 16px;border-radius:30px;}
+.torikumi-proof-caption{position:absolute;left:18px;bottom:18px;background:rgba(20,30,10,0.55);backdrop-filter:blur(3px);color:#fff;font-size:14px;font-weight:500;letter-spacing:.03em;padding:8px 16px;border-radius:30px;}
 .torikumi-cert-list{display:flex;flex-direction:column;gap:22px;justify-content:center;}
 .torikumi-cert-card{display:flex;align-items:center;gap:20px;background:#fff;border:1.5px solid #e2ebd4;border-radius:18px;padding:22px 26px;}
 .torikumi-cert-thumb{flex-shrink:0;width:76px;height:104px;border-radius:4px;overflow:hidden;border:4px solid #fff;outline:1px solid #e6dfc8;box-shadow:0 6px 16px rgba(60,90,40,0.22);transform:rotate(-3deg);}
@@ -405,18 +429,18 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 /* ── Purchase flow (hanbai page) ── */
 .flow-grid{display:grid;grid-template-columns:1fr 48px 1fr 48px 1fr;align-items:center;}
 .flow-card{background:#fff;border:1.5px solid #e5e2d4;border-radius:18px;padding:30px 24px;text-align:center;height:100%;}
-.flow-num{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#4d6b2f;color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;margin:0 auto 16px;}
-.flow-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16.5px;color:#3f5a28;margin:0 0 10px;}
-.flow-text{font-size:13px;color:#5c5849;line-height:1.85;margin:0;}
-.flow-connector{display:flex;align-items:center;justify-content:center;color:#b8c9a0;font-size:22px;}
+.flow-num{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#4d6b2f;color:#fff;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15.5px;margin:0 auto 16px;}
+.flow-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:18px;color:#3f5a28;margin:0 0 10px;}
+.flow-text{font-size:14.5px;color:#5c5849;line-height:1.85;margin:0;}
+.flow-connector{display:flex;align-items:center;justify-content:center;color:#b8c9a0;font-size:23.5px;}
 
 /* ── Order methods (hanbai page) ── */
 .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
 .method-card{background:#fff;border:1.5px solid #e5e2d4;border-radius:18px;padding:26px 22px;}
 .method-icon{width:44px;height:44px;border-radius:12px;background:#eef6e2;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
-.method-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:#3f5a28;margin:0 0 10px;}
-.method-value{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#4d6b2f;text-decoration:none;display:inline-block;margin:0 0 6px;word-break:break-all;line-height:1.4;}
-.method-text{font-size:12px;color:#8a8470;line-height:1.7;margin:0;}
+.method-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15.5px;color:#3f5a28;margin:0 0 10px;}
+.method-value{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:17.5px;color:#4d6b2f;text-decoration:none;display:inline-block;margin:0 0 6px;word-break:break-all;line-height:1.4;}
+.method-text{font-size:13.5px;color:#8a8470;line-height:1.7;margin:0;}
 
 @media (max-width:1024px){
   .method-grid{grid-template-columns:repeat(2,1fr);}
@@ -442,8 +466,8 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 .route-card:last-child{margin-bottom:0;}
 .route-card-head{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
 .route-icon{width:40px;height:40px;border-radius:10px;background:#eef6e2;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.route-card-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:#3f5a28;}
-.route-card-text{font-size:13.5px;color:#5c5849;line-height:1.9;margin:0;}
+.route-card-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:17.5px;color:#3f5a28;}
+.route-card-text{font-size:15px;color:#5c5849;line-height:1.9;margin:0;}
 @media (max-width:1024px){
   .access-route-grid{grid-template-columns:1fr;}
 }
@@ -457,14 +481,14 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
   .furusato-grid{grid-template-columns:1fr;gap:12px;}
   .furusato-card{display:grid;grid-template-columns:1fr auto;column-gap:16px;row-gap:4px;align-items:center;padding:16px 20px;}
   .furusato-card::before{top:0;left:0;right:auto;bottom:0;width:4px;height:auto;}
-  .furusato-card-name{grid-column:1;font-size:14.5px;}
+  .furusato-card-name{grid-column:1;font-size:16px;}
   .furusato-card-sub{grid-column:1;}
   .furusato-card-arrow{grid-column:2;grid-row:1/3;margin-top:0;align-self:center;flex-shrink:0;}
 }
 
 /* ── News category filter ── */
 .news-filter{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;}
-.news-filter-btn{font-family:'Zen Kaku Gothic New',sans-serif;font-size:13.5px;font-weight:700;color:#6b7a58;background:#fff;border:1.5px solid #dde6cc;border-radius:24px;padding:8px 20px;cursor:pointer;transition:background .18s,border-color .18s,color .18s;}
+.news-filter-btn{font-family:'Zen Kaku Gothic New',sans-serif;font-size:15px;font-weight:700;color:#6b7a58;background:#fff;border:1.5px solid #dde6cc;border-radius:24px;padding:8px 20px;cursor:pointer;transition:background .18s,border-color .18s,color .18s;}
 .news-filter-btn:hover{border-color:#7bb04f;color:#4d6b2f;}
 .news-filter-btn.active{background:#4d6b2f;border-color:#4d6b2f;color:#fff;}
 

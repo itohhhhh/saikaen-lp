@@ -306,6 +306,37 @@ if (contactForm) {
   submitProtectedForm(contactForm, 'contact', 'contact-thanks.html');
 }
 
+// Lightbox: click-to-enlarge for images with class "lightbox-img"
+var lightboxImgs = document.querySelectorAll('.lightbox-img');
+if (lightboxImgs.length) {
+  var lightboxOverlay = document.createElement('div');
+  lightboxOverlay.className = 'lightbox-overlay';
+  lightboxOverlay.innerHTML = '<button type="button" class="lightbox-close" aria-label="閉じる">&times;</button><img class="lightbox-overlay-img" alt="">';
+  document.body.appendChild(lightboxOverlay);
+  var lightboxOverlayImg = lightboxOverlay.querySelector('.lightbox-overlay-img');
+
+  function openLightbox(img) {
+    lightboxOverlayImg.src = img.currentSrc || img.src;
+    lightboxOverlayImg.alt = img.alt || '';
+    lightboxOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightboxOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  lightboxImgs.forEach(function(img) {
+    img.addEventListener('click', function() { openLightbox(img); });
+  });
+  lightboxOverlay.addEventListener('click', function(e) {
+    if (e.target === lightboxOverlay) closeLightbox();
+  });
+  lightboxOverlay.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
+}
+
 // Harvest calendar bar animation
 var hcalInner = document.querySelector('.hcal-inner');
 if (hcalInner) {
