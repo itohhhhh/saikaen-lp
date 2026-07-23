@@ -14,7 +14,7 @@ mb_internal_encoding('UTF-8');
 header('Content-Type: application/json; charset=utf-8');
 
 // このフォームの送信先
-const MAIL_TO       = 'uenoyama.saikaen@gmail.com';
+const MAIL_TO       = 'ito_shunichi@icloud.com';
 const MAIL_FROM      = 'no-reply@uenoyama-saikaen.com';
 const MAIL_FROM_NAME = '上の山彩果園 ウェブサイト';
 
@@ -168,7 +168,7 @@ $headers = [
     'Reply-To: ' . $email,
 ];
 
-$sent = mb_send_mail(MAIL_TO, $subject, $body, implode("\r\n", $headers));
+$sent = mb_send_mail(MAIL_TO, $subject, $body, implode("\r\n", $headers), '-f' . MAIL_FROM);
 
 if ($sent) {
     respond(true, 'ご予約を受け付けました。');
