@@ -435,16 +435,12 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 .flow-connector{display:flex;align-items:center;justify-content:center;color:#b8c9a0;font-size:23.5px;}
 
 /* ── Order methods (hanbai page) ── */
-.method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.method-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;}
 .method-card{background:#fff;border:1.5px solid #e5e2d4;border-radius:18px;padding:26px 22px;}
 .method-icon{width:44px;height:44px;border-radius:12px;background:#eef6e2;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
 .method-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15.5px;color:#3f5a28;margin:0 0 10px;}
 .method-value{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:17.5px;color:#4d6b2f;text-decoration:none;display:inline-block;margin:0 0 6px;word-break:break-all;line-height:1.4;}
 .method-text{font-size:13.5px;color:#8a8470;line-height:1.7;margin:0;}
-
-@media (max-width:1024px){
-  .method-grid{grid-template-columns:repeat(2,1fr);}
-}
 
 @media (max-width:768px){
   .torikumi-proof{grid-template-columns:1fr;gap:26px;}
@@ -454,7 +450,6 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 }
 
 @media (max-width:480px){
-  .method-grid{grid-template-columns:1fr;}
   .torikumi-cert-card{flex-direction:column;text-align:center;padding:24px 20px;}
 }
 
