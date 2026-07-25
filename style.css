@@ -67,15 +67,14 @@ details.news-card[open]>summary .news-arrow{transform:rotate(45deg);}
 .cards-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:24px;align-items:stretch;}
 .access-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.15fr 1fr;gap:54px;}
 .access-inner-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;}
-.about-text{max-width:640px;}
-.about-text p{font-size:16px;color:#5c5849;line-height:2.05;margin:0 0 22px;}
+.about-layout{display:flex;align-items:flex-start;justify-content:space-between;gap:56px;}
+.about-text{flex:1;min-width:0;}
+.about-text p{font-size:18px;color:#5c5849;line-height:2.05;margin:0 0 22px;}
 .about-text p:last-child{margin-bottom:0;}
-.about-text p:first-child{font-family:'Shippori Mincho',serif;font-weight:600;font-size:19.5px;color:#3f5a28;line-height:2;letter-spacing:.03em;margin-bottom:26px;}
-.about-photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;}
+.about-text p:first-child{font-family:'Shippori Mincho',serif;font-weight:600;font-size:19.5px;color:#3f5a28;line-height:2;letter-spacing:.03em;margin-bottom:50px;}
+.about-photo-row{display:flex;flex-direction:column;flex-shrink:0;width:280px;gap:22px;margin-top:0;}
 .about-photo-row figure{position:relative;margin:0;border-radius:20px;overflow:hidden;box-shadow:0 16px 34px rgba(120,100,50,0.16);}
-.about-photo-row figure:nth-child(1){transform:rotate(-1.2deg);}
-.about-photo-row figure:nth-child(3){transform:rotate(1.2deg);}
-.about-photo-row img{width:100%;height:300px;object-fit:cover;display:block;transition:transform .5s ease;}
+.about-photo-row img{width:100%;height:180px;object-fit:cover;display:block;transition:transform .5s ease;}
 .about-photo-row figure:hover img{transform:scale(1.06);}
 .about-photo-row figcaption{position:absolute;left:14px;bottom:14px;background:rgba(20,30,10,0.55);backdrop-filter:blur(3px);color:#fff;font-size:13px;font-weight:500;letter-spacing:.03em;padding:7px 14px;border-radius:30px;}
 .contact-col{border-left:1px solid #ece6d2;padding-left:48px;}
@@ -167,6 +166,11 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
 @media (max-width:1024px){
   .hero-heading{font-size:36px;}
   .variety-grid{grid-template-columns:repeat(3,1fr);}
+
+  /* about: PC以外は文章の下に写真を横並び表示 */
+  .about-layout{flex-direction:column;gap:0;}
+  .about-photo-row{display:grid;grid-template-columns:repeat(3,1fr);width:100%;margin-top:48px;}
+  .about-photo-row img{height:300px;}
 
   /* Header (ナビが幅を超えるため、ハンバーガーメニューに切替) */
   .header-inner{padding:10px 60px 10px 20px;}
