@@ -67,6 +67,12 @@ details.news-card[open]>summary .news-arrow{transform:rotate(45deg);}
 .cards-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:24px;align-items:stretch;}
 .access-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1.15fr 1fr;gap:54px;}
 .access-inner-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;}
+.about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:40px;align-items:start;}
+.about-photo-stack{display:flex;flex-direction:column;gap:22px;}
+.about-photo-stack img{width:100%;border-radius:18px;box-shadow:0 16px 34px rgba(120,100,50,0.18);display:block;}
+.about-photo-stack img:nth-child(1){transform:rotate(-1.6deg);}
+.about-photo-stack img:nth-child(2){transform:rotate(1.6deg);}
+.about-fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .contact-col{border-left:1px solid #ece6d2;padding-left:48px;}
 .footer-main-row{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:34px;flex-wrap:wrap;}
 .footer-bottom-row{max-width:1080px;margin:18px auto 0;padding-top:16px;border-top:1px solid rgba(120,150,80,0.25);display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
@@ -181,6 +187,12 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   .news-row{flex-wrap:wrap;gap:8px 12px;padding:16px 20px;}
   .news-meta{width:100%;}
   .news-title{width:100%;}
+
+  /* about */
+  .about-grid{grid-template-columns:1fr;gap:28px;}
+  .about-fact-grid{grid-template-columns:1fr;}
+  .about-photo-stack{flex-direction:row;gap:14px;}
+  .about-photo-stack img{transform:none;}
 
   /* torikumi */
   .torikumi-item{grid-template-columns:1fr;min-height:auto;}
