@@ -146,6 +146,8 @@ footer span,footer a:not(.navlink){text-shadow:0 1px 8px rgba(255,255,255,0.9);}
   .hours-card{padding:30px 24px 28px !important;border-radius:20px !important;}
   .hours-grid{grid-template-columns:1fr !important;gap:20px !important;}
   .hours-grid-item{border-left:none;padding-left:0;border-top:1px solid rgba(255,255,255,0.16);padding-top:18px;}
+  .hours-footer{flex-direction:column;text-align:center;}
+  .hours-tel-btn{align-self:center;}
 }
 
 /* ── Section title variant (left-aligned with vertical bar) ── */
