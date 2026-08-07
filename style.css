@@ -557,3 +557,39 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 }
 @media (max-width:1280px){ .fruit-deco { display:none; } }
 @media (prefers-reduced-motion:reduce){ .fruit-deco-item { animation:none !important; } }
+
+/* ── 収穫・予約状況ページ ── */
+.status-stamp{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:104px;height:104px;flex-shrink:0;background:#fdf8ec;border:2px solid #cdb96a;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.18);transform:rotate(-8deg);}
+.status-stamp-label{font-family:'Shippori Mincho',serif;font-size:10.5px;color:#8a6020;letter-spacing:.08em;}
+.status-stamp-date{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:#8a6020;line-height:1.35;text-align:center;}
+
+.status-card{background:#fff;border:1.5px solid #e2ebd4;border-radius:22px;padding:32px 34px;height:100%;}
+.status-card-head{display:flex;align-items:center;gap:13px;margin-bottom:22px;}
+.status-card-icon{display:flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:12px;flex-shrink:0;}
+.status-card-title{display:flex;align-items:center;gap:9px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:18.5px;color:#3f4a33;}
+
+.status-live-dot{position:relative;display:inline-block;width:9px;height:9px;border-radius:50%;background:#3f9b32;flex-shrink:0;}
+.status-live-dot::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1.5px solid rgba(63,155,50,0.55);animation:statusPulse 2.2s ease-out infinite;}
+@keyframes statusPulse{0%{transform:scale(.5);opacity:1;}100%{transform:scale(2.1);opacity:0;}}
+
+.status-chip-list{display:flex;flex-wrap:wrap;gap:10px;}
+.status-chip{display:inline-flex;align-items:center;gap:6px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15.5px;border-radius:22px;padding:9px 20px;}
+.status-chip-open{background:#eef6e2;color:#3f5a28;border:1.5px solid #cfe4ad;}
+.status-chip-soon{background:#fbf1da;color:#8a6020;border:1.5px solid #e4cf94;}
+.status-chip-closed{background:#f4f2ea;color:#a29c88;border:1.5px solid #e5e2d4;text-decoration:line-through;text-decoration-color:#c9c4b4;text-decoration-thickness:1.5px;}
+
+.status-empty{font-size:15px;color:#8a8470;line-height:1.9;margin:0;}
+.status-empty-sub{display:block;font-size:13.5px;color:#a29c88;margin-top:8px;}
+
+.status-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.status-grid-2{display:flex;flex-direction:column;gap:24px;}
+
+@media (max-width:768px){
+  .status-grid{grid-template-columns:1fr;}
+  .status-card{padding:26px 24px;}
+  .status-stamp{width:88px;height:88px;}
+  .status-stamp-date{font-size:13.5px;}
+}
+@media (prefers-reduced-motion:reduce){
+  .status-live-dot::after{animation:none;}
+}
