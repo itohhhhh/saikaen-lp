@@ -324,7 +324,7 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 .form-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 .form-field{display:flex;flex-direction:column;gap:8px;margin-bottom:22px;}
 .form-field:last-child{margin-bottom:0;}
-.form-field label{font-size:15px;font-weight:700;color:#4a4636;display:flex;align-items:center;gap:8px;}
+.form-field label{font-size:15px;font-weight:700;color:#4a4636;display:flex;align-items:center;flex-wrap:wrap;gap:8px;}
 .form-required{font-size:12px;font-weight:700;color:#fff;background:#c96a4a;border-radius:10px;padding:2px 8px;letter-spacing:.04em;}
 .form-optional{font-size:12px;font-weight:700;color:#8a8470;background:#f0ece0;border-radius:10px;padding:2px 8px;letter-spacing:.04em;}
 .form-input,.form-textarea,.form-select{font-family:'Zen Kaku Gothic New',sans-serif;font-size:16px;color:#3f4a33;background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:10px;padding:12px 16px;transition:border-color .18s,background .18s;width:100%;}
@@ -350,7 +350,7 @@ details.news-card[open]>summary:hover .news-arrow { transform: rotate(45deg) tra
 .form-success-icon{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border-radius:50%;background:#eef6e2;color:#4d6b2f;font-size:28px;margin:0 auto 20px;}
 
 /* ── Reservation form: multiple destinations ── */
-.dest-block{background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:14px;padding:20px 20px 4px;margin-bottom:14px;}
+.dest-block{background:#faf9f4;border:1.5px solid #e5e2d4;border-radius:14px;padding:20px;margin-bottom:14px;}
 .dest-block .form-grid-2{margin-bottom:0;}
 .dest-block-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;}
 .dest-block-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;color:#4d6b2f;}
