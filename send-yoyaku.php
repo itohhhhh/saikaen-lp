@@ -88,7 +88,8 @@ for ($i = 0; $i < 3; $i++) {
     $destinations[] = ['name' => $dn, 'tel' => $dt, 'postal' => $dp, 'address' => $da];
 }
 
-$allowedVarieties  = ['幸水', '豊水', '二十世紀', '新星', 'あきづき', '涼豊', 'ラ・フランス', 'ル・レクチェ', 'ふじ'];
+// 二十世紀・ラ・フランス・ル・レクチェ・ふじは予約受付終了、涼豊は販売休止中のため対象外
+$allowedVarieties  = ['幸水', '豊水', '新星', 'あきづき'];
 $allowedBoxSizes   = ['3kg', '5kg', '10kg', '15kg'];
 $allowedFruitSizes = ['2L', '3L', '4L', '5L', '6L'];
 $allowedMethods    = ['来園引き取り', '配送'];
