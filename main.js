@@ -278,7 +278,15 @@ if (yoyakuForm) {
         var targetIndex = parseInt(btn.getAttribute('data-target'), 10);
         destBlocks.forEach(function(b, i) {
           if (i + 1 >= targetIndex) {
-            b.querySelectorAll('input').forEach(function(input) { input.value = ''; });
+            b.querySelectorAll('input').forEach(function(input) {
+              if (input.type === 'radio' || input.type === 'checkbox') {
+                input.checked = false;
+                var wrapper = input.closest('.variety-chip') || input.closest('.form-radio');
+                if (wrapper) wrapper.classList.remove('checked');
+              } else {
+                input.value = '';
+              }
+            });
             b.style.display = 'none';
           }
         });
