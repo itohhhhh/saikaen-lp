@@ -60,8 +60,8 @@ $payment   = trim((string)($_POST['payment'] ?? ''));
 $remarks   = trim((string)($_POST['remarks'] ?? ''));
 $agree     = (string)($_POST['agree'] ?? '');
 
-// 二十世紀・ラ・フランス・ル・レクチェ・ふじは予約受付終了、涼豊は販売休止中のため対象外
-$allowedVarieties  = ['幸水', '豊水', '新星', 'あきづき'];
+// 幸水・豊水・新星は予約受付終了、涼豊は販売休止中、ラ・フランス・ル・レクチェ・ふじは予約受付終了のため対象外
+$allowedVarieties  = ['二十世紀', 'あきづき'];
 $allowedBoxSizes   = ['3kg', '5kg', '10kg', '15kg'];
 $allowedFruitSizes = ['2L', '3L', '4L', '5L', '6L'];
 $allowedMethods    = ['来園引き取り', '配送'];
